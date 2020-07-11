@@ -30,19 +30,12 @@ require('./configs/session.config')(app);
 // Express View engine setup
 
 app.set('views', path.join(__dirname, 'views'));
-//indica engine do view vai ser `hbs`
 app.set('view engine', 'hbs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
-
-//escreve todas as rotas que foram acessadas (logger)
 app.use(logger('dev'));
-
-//habilita respostas e requisicoes json
 app.use(express.json());
-
-//aceita requisicao(chega do navegador para o servidor) url params/ =?
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
