@@ -17,7 +17,6 @@ const hostSchema = new Schema(
             type: Number,
             required: true
         }
-        
     }
 );
 
