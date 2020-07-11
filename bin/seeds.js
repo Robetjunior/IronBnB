@@ -16,9 +16,9 @@ const host = [
     {local: 'Campinas', espaco: 'Quarto inteiro', qntHosp: 7},
     {local: 'Campinas', espaco: 'Espaco inteiro', qntHosp: 15},
     {local: 'Campinas', espaco: 'Quarto compartilhado', qntHosp: 3},
-    {local: 'Jardins', espaco: 'Quarto inteiro', qntHosp: 2},
-    {local: 'Jardins', espaco: 'Espaco inteiro', qntHosp: 20},
-    {local: 'Jardins', espaco: 'Quarto compartilhado', qntHosp: 5},
+    {local: 'Osasco', espaco: 'Quarto inteiro', qntHosp: 1},
+    {local: 'Osasco', espaco: 'Espaco inteiro', qntHosp: 3},
+    {local: 'Osasco', espaco: 'Quarto compartilhado', qntHosp: 1},
 ];
 
 (async function seedDB(){
