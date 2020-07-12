@@ -1,5 +1,10 @@
-{{#with host}}
-    <img class="card-img-top" src="images/hostExemple.jpg" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
-    <h1>{{this.local}}</h1>
-    <h2>Tipo de host: {{this.espaco}} | Qntd de hospedes: {{this.qntHosp}}</h2>
-{{/with}}
+<div class="container">
+    {{#with host}}
+        <img class="card-img-top" src="images/hostExemple.jpg" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+        <h1>{{this.local}}</h1>
+        <h2>Tipo de host: {{this.espaco}} | Qntd de hospedes: {{this.qntHosp}}</h2>
+        <a href="/search/{{this.id}}/reserva" type="button" class="btn btn-sm btn-outline-secondary">
+            Reservar
+        </a>
+    {{/with}}
+</div>
