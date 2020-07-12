@@ -19,7 +19,7 @@ form label {
   color: #666;
   display: inline-block;
   margin-bottom: 10px;
-  text-align: center;
+ 
   width: 100%;
 }
 
@@ -139,4 +139,9 @@ ul li {
 
 #btn_white{
   background-color: white !important;
+}
+
+#div-center{
+  align-content: center;
+  
 }
