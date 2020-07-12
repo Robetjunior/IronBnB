@@ -17,4 +17,15 @@ router.get('/search', async (req, res) =>{
     }
 });
 
+//Direciona e mostra o details do host selecionado
+router.get('/search/:hostId', async (req, res) =>  {
+    try{
+        const hostId = await Host.findById(req.params.hostId);
+        // res.send({hostId})
+        res.render('guest/details-host', {host : hostId[req.params.hostId]})
+    }catch(err){
+        console.error(err);
+    }
+});
+
 module.exports = router;
