@@ -1,5 +1,3 @@
-// routes/auth.routes.js
-
 const { Router } = require('express');
 const router = new Router();
 const bcryptjs = require('bcryptjs');
@@ -40,9 +38,6 @@ router.post('/signup', (req, res, next) => {
         // username: username
         username,
         email,
-        // passwordHash => this is the key from the User model
-        //     ^
-        //     |            |--> this is placeholder (how we named returning value from the previous method (.hash()))
         passwordHash: hashedPassword
       });
     })
