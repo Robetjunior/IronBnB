@@ -92,21 +92,26 @@ input:focus + label {
 </style>
 <body>
     
+  <h2>Login</h2>
 
-<form action="">
-  <div class="field">
-    <input type="text" name="fullname" id="fullname" placeholder="example@example.com">
-    <label for="fullname">Email</label>
-  </div>
+  <form action="/login">
+
+    <ul><li><a href=""><i class="fa fa-facebook"></i></a></li></ul>
+
+    <div class="field">
+      <input type="email" name="email" id="input-email" placeholder="example@example.com" required >
+      <label for="input-email">Email</label>
+    </div>
+
+    <div class="field">
+      <input type="password" name="password" id="input-password" placeholder="***********" required >
+      <label for="input-password">Password</label>
+    </div>
   
-  <div class="field">
-    <input type="email" name="email" id="email" placeholder="***********">
-    <label for="email">Password</label>
-  </div>
   </form>
 
 {{!-- <div id="form">
-    <h2>Login</h2>
+    
     <form action="/login" class="go-top" method="POST">
 
          <input type="email" id="input-email" name="email" placeholder="Your email" required />
