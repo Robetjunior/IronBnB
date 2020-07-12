@@ -1,2 +1,33 @@
-<h1>{{title}}</h1>
-<p>Welcome Ironhacker!</p>
+    <style>.btn_white{
+  background-color: white ;
+  width: 40px;
+  height: 38px;
+  border-left:none;
+
+}#local{
+    border:1px solid lightseagreen;
+    border-right:none;
+}
+.imgbg{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+</style>    
+
+
+    <img class="imgbg" src="./images/backgroundHomePage.png" class="d-block w-100" alt="">
+
+    <div class="carousel-caption d-none d-md-block d-flex justify-content-center">
+        <h1><img src="/images/icon1.png" alt="" width="60px"></h1> 
+    <form action="/search" method="POST">
+        <label for="input-host"></label> 
+    <div class="input-group mb-3 " >
+    <input type="text" class="form-control" id="local" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+    <button class="btn_white btn btn-outline-primary fa fa-search " type="submit"></button>
+  </div>
+</div>
+</form>
+    </div>
