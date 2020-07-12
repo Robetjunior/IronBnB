@@ -22,7 +22,7 @@ router.get('/search/:hostId', async (req, res) =>  {
     try{
         const hostId = await Host.findById(req.params.hostId);
         // res.send({hostId})
-        res.render('guest/details-host', {host : hostId[req.params.hostId]})
+        res.render('guest/details-host', {host : hostId})
     }catch(err){
         console.error(err);
     }
