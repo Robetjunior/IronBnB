@@ -3,8 +3,6 @@ const router = new Router();
 const Host = require('../models/Host.model');
 const mongoose = require('mongoose');
 
-// router.get('/search', (req, res) => res.render('search'));
-
 //filtra todos os hosts
 // router.get('/search', async (req, res) =>{
 //     try{
