@@ -6,3 +6,5 @@ const mongoose = require('mongoose');
 router.get('/search', (req, res) => res.render('search'));
 
 // router.post('/')
+
+module.exports = router;
