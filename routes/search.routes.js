@@ -35,15 +35,24 @@ router.get('/search/:hostId', async (req, res) =>  {
     }
 });
 
-router.get('/search/:hostId/reserva', async (req, res) => {
-    try{
-        const hostId = await Host.findById(req.params.hosId);
-        res.send({hostId})
-        // res.render('guest/confirm-host', {host: hostId});
-    }catch(err){
-        throw new Error(err);
-    }
-})
+
+//Testes para direcionar form 
+// router.post('/search/:hostId', (req, res, next) => {
+//     const {startDate, endDate} = req.body;
+
+//     console.log(startDate, endDate)
+// })
+
+//Testes para direcionar form 
+// router.get('/search/:hostId/reserva', async (req, res) => {
+//     try{
+//         const hostId = await Host.findById(req.params.hosId);
+//         res.send({hostId})
+//         // res.render('guest/confirm-host', {host: hostId});
+//     }catch(err){
+//         throw new Error(err);
+//     }
+// })
 
 
 module.exports = router;
