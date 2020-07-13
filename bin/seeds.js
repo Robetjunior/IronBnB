@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Host = require('../models/Host.model');
-const { db } = require('../models/Host.model');
 
 require('../configs/db.config');
 
