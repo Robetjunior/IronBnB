@@ -6,10 +6,10 @@
   font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
 }
 
-
-form {
-  margin: 2em 0;
+h1{
+text-align: center;
 }
+
 /**
 * Make the field a flex-container, reverse the order so label is on top.
 */
@@ -92,42 +92,37 @@ input:focus + label {
 </style>
 <body>
     
-  <h2>Login</h2>
+  <div class="container">
 
-  <form action="/login">
+    <div id="form">
 
-    <ul><li><a href=""><i class="fa fa-facebook"></i></a></li></ul>
-
-    <div class="field">
-      <input type="email" name="email" id="input-email" placeholder="example@example.com" required >
-      <label for="input-email">Email</label>
-    </div>
-
-    <div class="field">
-      <input type="password" name="password" id="input-password" placeholder="***********" required >
-      <label for="input-password">Password</label>
-    </div>
-  
-  </form>
-
-{{!-- <div id="form">
-    
-    <form action="/login" class="go-top" method="POST">
-
-         <input type="email" id="input-email" name="email" placeholder="Your email" required />
-         <label for="input-email">Email</label>   
-
-        <label for="input-password">Password</label>
-        <input type="password" name="password" id="input-password" placeholder="********" required/>
-
-        <button type="submit">Login</button>
-
-        {{#if errorMessage}}
-            <p class="error">{{errorMessage}}</p>
-        {{/if}}
-         <p class="mt-5 mb-3 text-muted text-center">©Ironbnb 2020</p>
-
-         
+      <div class="text-center mb-4">
+        <img class="mb-4 mt-4" src="./images/icon1.png" alt="" width="72" height="72">
       </div>
-    </form>
-</div> --}}
+  
+      <form action="/login" class="form-signin" method="POST">
+
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+
+        <div class="field  form-label-group">
+          <input type="email" name="email" id="input-email" placeholder="example@example.com"  >
+          <label for="input-email">Email</label>
+        </div>
+
+        <div class="field  form-label-group">
+          <input type="password" name="password" id="input-password" placeholder="***********"  >
+          <label for="input-password">Password</label>
+        </div>
+  
+        <button type="submit">Login</button>
+   
+        {{#if errorMessage}}
+          <p class="error">{{errorMessage}}</p>
+        {{/if}}
+
+        <p class="mt-5 mb-3 text-muted text-center">© Ironbnb 2020</p>
+    
+      </form>
+    </div>
+  </div> 
+</body>

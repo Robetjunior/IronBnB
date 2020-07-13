@@ -3,11 +3,10 @@
    body {
   font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
 }
-
-
-form {
-  margin: 2em 0;
+h1{
+  text-align: center;
 }
+
 /**
 * Make the field a flex-container, reverse the order so label is on top.
 */
@@ -41,7 +40,7 @@ input {
 
 input:focus {
   outline: 0;
-  border-bottom: 1px solid #666;
+border-bottom: 1px solid #666;  
 }
 
 label {
@@ -88,68 +87,45 @@ input:focus + label {
   cursor: pointer;
 }
 </style>
+             {{!-- Armazenando todo o corpo da pagina de Sign up no container  --}}
 
-<div class="container" >
-<div id="form">
-  <div class="text-center mb-4">
-        <img class="mb-4 mt-4" src="./images/icon1.png" alt="" width="72" height="72">
-        
-  </div>
- <h1 class="h3 mb-3 font-weight-normal">Signup</h1>
-      <form action="/signup" method="POST" class="form-signin ">
+<div class="container">
 
-    <ul><li><a href=""><i class="fa fa-facebook"></i></a></li></ul>
+  <div id="form">
 
-    <div class="field">
-      <input type="text" id="input-username" name="username" placeholder="Fulano Beltrano Tucano" required/>
-      <label for="input-name">Nome</label>
+    <div class="text-center mb-4">
+      <img class="mb-4 mt-4" src="./images/icon1.png" alt="" width="72" height="72">
     </div>
 
-    <div class="field">
-      <input type="email" name="email" id="input-email" placeholder="example@example.com"  >
-      <label for="input-email">Email</label>
-    </div>
+    <form action="/signup" method="POST" class="form-signin ">
 
-    <div class="field">
-      <input type="password" name="password" id="input-password" placeholder="***********"  >
-      <label for="input-password">Password</label>
-    </div>
-  
-  </form>
-
-  
-{{!-- <div class="container" >
-<div id="form">
-  <div class="text-center mb-4">
-        <img class="mb-4 mt-4" src="./images/icon1.png" alt="" width="72" height="72">
-        
-  </div> --}}
-
-    {{!-- <form action="/signup" method="POST" class="form-signin "> --}}
-  <div class="form-label-group">
-  
-    {{!-- <label for="input-username">Username</label> --}}
-    <input type="text" id="input-username" name="username" placeholder="Your username" />
-  </div>
-   <div class="form-label-group">
-    <label for="input-email">Email</label>
-    <input type="email" id="input-email" name="email" placeholder="Your email" />
-</div>
-<div class="form-label-group">
-    <label for="input-password">Password</label>
-    <input type="password" name="password" id="input-password" placeholder="********" />
-    </div>
-    <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me</label>
+      <h1 class="h3 mb-3 font-weight-normal">Signup</h1>
+    
+      <div class="field  form-label-group">
+        <input type="text" name="username" id="input-username" placeholder="Fulano Beltrano Ciclano"  />
+        <label for="input-username">Name</label>
       </div>
-    <button type="submit">Create account</button>
 
-    {{!-- error message will be added here --}}
-    {{#if errorMessage}}
-    <p class="error">{{errorMessage}}</p>
-    {{/if}}
-    <p class="mt-5 mb-3 text-muted text-center">©Ironbnb 2020</p>
-  </form>
+      <div class="field form-label-group">
+        <input type="email" name="email" id="input-email" placeholder="example@example.com"  />
+        <label for="input-email">Email</label>
+      </div>
+
+      <div class="field form-label-group">
+        <input type="password" name="password" id="input-password" placeholder="***********"  />
+        <label for="input-password">Password</label>
+      </div>
+      
+      <button type="submit">Create account</button>
+
+
+                {{!-- error message will be added here --}}
+      {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+      {{/if}}
+      <p class="mt-5 mb-3 text-muted text-center">© Ironbnb 2020</p>
+
+    </form>
+  </div>
 </div>
-</div>
+
