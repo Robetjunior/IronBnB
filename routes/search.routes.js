@@ -6,21 +6,20 @@ const mongoose = require('mongoose');
 // router.get('/search', (req, res) => res.render('search'));
 
 //filtra todos os hosts
-router.get('/search', async (req, res) =>{
-    try{
-        const localData = await Host.find();
-        // return res.send({localData})
-        res.render('search', {host: localData})
-    }catch(err){
-        throw new Error(err)
-    }
-});
+// router.get('/search', async (req, res) =>{
+//     try{
+//         const localData = await Host.find();
+//         // return res.send({localData})
+//         res.render('search', {host: localData})
+//     }catch(err){
+//         throw new Error(err)
+//     }
+// });
 
-//filtra todos os hosts do local especifico
+//filtra os hosts do local
 router.get('/search', async (req, res) =>{
     try{
         const localData = await Host.find({"local":req.query.search});
-        // return res.send({localData})
         res.render('search', {host: localData})
     }catch(err){
         throw new Error(err)
