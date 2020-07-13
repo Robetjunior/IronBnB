@@ -16,6 +16,11 @@ const hostSchema = new Schema(
         qntHosp:{
             type: Number,
             required: true
+        },
+        preco:{
+            type: Number,
+            require: true,
+            trim: true
         }
     }
 );
