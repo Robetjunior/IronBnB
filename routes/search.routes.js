@@ -38,7 +38,8 @@ router.get('/search/:hostId', async (req, res) =>  {
 router.get('/search/:hostId/reserva', async (req, res) => {
     try{
         const hostId = await Host.findById(req.params.hosId);
-        res.render('guest/confirm-host', {host: hostId});
+        res.send({hostId})
+        // res.render('guest/confirm-host', {host: hostId});
     }catch(err){
         throw new Error(err);
     }
