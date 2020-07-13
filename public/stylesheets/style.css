@@ -1,7 +1,7 @@
 body {
   
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  background-image: url(/public/images/backgroundHomePage.png)!important;
+  
 }
 
 a {
@@ -129,12 +129,13 @@ ul li {
   background:#0a2c42;
   color: #fff;
   padding:15px;
-  display: flex;
+  display: block;
   align-items:center;
   justify-content: flex-start;
   bottom: 0px;
-  position: fixed;
   width: 100%;
+  height: 2.5rem; 
+  position: fixed ;
 }
 
 #btn_white{
@@ -145,3 +146,13 @@ ul li {
   align-content: center;
   
 }
+#page-container {
+  position: relative;
+  min-height: 800px;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+
