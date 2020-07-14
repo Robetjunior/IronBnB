@@ -35,34 +35,33 @@ router.get('/search/:hostId', async (req, res) =>  {
 
 //Testes para direcionar form 
 router.post('/search/:hostId/reserva', async (req, res) => {
-    console.log(req.session)
-    
     try{
         if(!req.session.currentUser){
             res.redirect('/login')
         }
         const result = await Host.findById(req.params.hostId);
-        console.log(result)
+        
         const { startDate, endDate } = req.body;
 
-        const diffTime = endDate.getTime() - startDate.getTime();
-        const diffDays = Math.ceil(diffTime /(1000 * 60 * 60 * 24));
+        const date1 = new Date(startDate)
+        const date2 = new Date(endDate)
+        
+        const diffTime = Math.abs(date2 - date1);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
 
-        console.log(startDate, endDate)
-        console.log(diffTime)
-        console.log(diffDays)
-        const newReserva =Reserva.create({
+        const newReserva = await Reserva.create({
             startDate: startDate,
             endDate: endDate,
             guestId: req.session.currentUser._id,
             hostId: result._id,
+            value: result.preco,
             totalValue: result.preco * diffDays
         })
 
-        res.send(newReserva)
-        // res.redirect('/search/:hostId/reserva')
+        console.log(newReserva)
+        // res.send(await newReserva)
+        res.render('guest/confirm-host', {reserva: newReserva})
     }catch(err){
-        console.log("caiu no catch")
         throw new Error(err);
     }
 })
