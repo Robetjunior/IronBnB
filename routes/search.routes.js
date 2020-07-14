@@ -33,7 +33,6 @@ router.get('/search/:hostId', async (req, res) =>  {
 //     red
 // })
 
-//Testes para direcionar form 
 router.post('/search/:hostId/reserva', async (req, res) => {
     try{
         if(!req.session.currentUser){
@@ -56,10 +55,8 @@ router.post('/search/:hostId/reserva', async (req, res) => {
             hostId: result._id,
             value: result.preco,
             totalValue: result.preco * diffDays
-        })
+        });
 
-        console.log(newReserva)
-        // res.send(await newReserva)
         res.render('guest/confirm-host', {reserva: newReserva})
     }catch(err){
         throw new Error(err);
@@ -72,9 +69,15 @@ router.get('/search/:hostId/reserva/confirm', async(req, res)=>{
 })
 
 router.post('/search/:hostId/reserva/confirm', async(req, res)=>{
-    const hostId = await Host.findById(req.params.hostId);
+    try{
+        const hostId = await Host.findById(req.params.hostId);
 
-    //muda a disponibilidade = true
+        await Reserva.updateOne({"_id": hostId}, {$set: {"reservado": true}})
+        
+        const guestId = await Reserva.findOne({'guestId': req.session.currentUser._id})
+    }catch(err){
+        throw new Error(err)
+    }
 })
 
 //criar um model reserva 
