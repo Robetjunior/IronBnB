@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const router = new Router();
 const Host = require('../models/Host.model');
+const Reserva = require('../models/Reserva.model');
 const mongoose = require('mongoose');
 
 //filtra os hosts do local
@@ -52,7 +53,7 @@ router.get('/search/:hostId/reserva/confirm', async(req, res)=>{
 router.post('/search/:hostId/reserva/confirm', async(req, res)=>{
     const hostId = await Host.findById(req.params.hostId);
 
-    // Reservation.create({
+    // Reserva.create({
     //     startDate: startDate,
     //     endDate: endDate,
     //     guestId: req.session.currentUser.id,
