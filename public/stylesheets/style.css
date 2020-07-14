@@ -50,7 +50,7 @@ form button {
 
 form button:hover {
   background: #fff;
-  color: #43a3e6;
+  color: #43a3e6 ;
   transition: 0.3s ease background;
 }
 
@@ -126,7 +126,7 @@ ul li {
 }
 
 .footer{
-  background:#0a2c42;
+  background:#014547;
   color: #fff;
   padding:15px;
   display: block;
@@ -139,9 +139,11 @@ ul li {
 }
 
 #btn_white{
-  background-color: white !important;
+  background-color: white ;
 }
-
+#btn_white{
+  background-color: white ;
+}
 #div-center{
   align-content: center;
   
@@ -156,3 +158,13 @@ ul li {
 }
 
 
+.index-N-hospedes-search{
+  background-color: white;
+  color: #0a68ac!important;
+}
+
+.index-price-search{
+  background-color: white!important;
+  color: #0a68ac!important
+  
+}
