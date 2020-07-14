@@ -1,22 +1,43 @@
 {{!--views/auth/signup.hbs --}}
 
-<div id="form">
-  <h2>Signup</h2>
-  <form action="/signup" method="POST">
-    <label for="input-username">Username</label>
-    <input type="text" id="input-username" name="username" placeholder="Your username" />
+             {{!-- Armazenando todo o corpo da pagina de Sign up no container  --}}
 
-    <label for="input-email">Email</label>
-    <input type="email" id="input-email" name="email" placeholder="Your email" />
+<div class="container">
+  <div id="form">
 
-    <label for="input-password">Password</label>
-    <input type="password" name="password" id="input-password" placeholder="********" />
+    <div class="text-center mb-2">
+      <img class="mb-2 mt-4" src="./images/icon1.png" alt="" width="150px" >
+    </div>
 
+    <form action="/signup" method="POST" class="form-signin">
+      <h1 class="h3 mb-3 font-weight-normal">Signup</h1>
+    
+    <div class="field  form-label-group">
+      <input type="text" name="username" id="input-username" placeholder="Fulano Beltrano Ciclano"/>
+      <label for="input-username">Name</label>
+    </div>
+
+    <div class="field form-label-group">
+      <input type="email" name="email" id="input-email" placeholder="example@ironbnb.com"/>
+      <label for="input-email">Email</label>
+    </div>
+
+    <div class="field form-label-group">
+      <input type="password" name="password" id="input-password" placeholder="***********"/>
+      <label for="input-password">Password</label>
+    </div>
+      
     <button type="submit">Create account</button>
 
-    {{!-- error message will be added here --}}
+
+                {{!-- error message will be added here --}}
     {{#if errorMessage}}
     <p class="error">{{errorMessage}}</p>
     {{/if}}
-  </form>
+
+    <p class="mt-1 text-muted text-center">© Ironbnb 2020</p>
+    </form>
+  </div>
 </div>
+
+

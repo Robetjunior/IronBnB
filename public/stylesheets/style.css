@@ -1,6 +1,7 @@
 body {
-  padding: 50px;
+  
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  
 }
 
 a {
@@ -18,7 +19,7 @@ form label {
   color: #666;
   display: inline-block;
   margin-bottom: 10px;
-  text-align: center;
+ 
   width: 100%;
 }
 
@@ -63,21 +64,21 @@ form button:hover {
 }
 
 ul {
-  border-bottom: 2px solid #43a3e6;
+  
   height: 30px;
   padding: 1em 0;
   list-style-type: none;
 }
 
 ul li {
-  line-height: 20px;
+  line-height: 20px ;
 }
 
 #to-right {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
   padding: 1em;
-  float: right;
+  float: right !important;
 }
 
 #logout-form {
@@ -118,3 +119,40 @@ ul li {
   font-weight: bold;
   font-size: 2em;
 }
+
+
+#nada{
+  background-color: none;
+}
+
+.footer{
+  background:#0a2c42;
+  color: #fff;
+  padding:15px;
+  display: block;
+  align-items:center;
+  justify-content: flex-start;
+  bottom: 0px;
+  width: 100%;
+  height: 2.5rem; 
+  position: fixed ;
+}
+
+#btn_white{
+  background-color: white !important;
+}
+
+#div-center{
+  align-content: center;
+  
+}
+#page-container {
+  position: relative;
+  min-height: 800px;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+

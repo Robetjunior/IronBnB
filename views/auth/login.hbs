@@ -1,18 +1,36 @@
-{{!-- views/auth/login.hbs --}}
+<body>
+    
+  <div class="container">
 
-<div id="form">
-    <h2>Login</h2>
-    <form action="/login" method="POST">
-        <label for="input-email">Email</label>
-        <input type="email" id="input-email" name="email" placeholder="Your email" />
+    <div id="form">
 
-        <label for="input-password">Password</label>
-        <input type="password" name="password" id="input-password" placeholder="********" />
+      <div class="text-center mb-4">
+        <img class="mb-4 mt-4" src="./images/icon1.png" alt="" width="150px" >
+      </div>
+  
+      <form action="/login" class="form-signin" method="POST">
 
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+
+        <div class="field  form-label-group">
+          <input type="email" name="email" id="input-email" placeholder="example@example.com"  >
+          <label for="input-email">Email</label>
+        </div>
+
+        <div class="field  form-label-group">
+          <input type="password" name="password" id="input-password" placeholder="***********"  >
+          <label for="input-password">Password</label>
+        </div>
+  
         <button type="submit">Login</button>
-
+   
         {{#if errorMessage}}
-            <p class="error">{{errorMessage}}</p>
+          <p class="error">{{errorMessage}}</p>
         {{/if}}
-    </form>
-</div>
+
+        <p class="mt-5 mb-3 text-muted text-center">© Ironbnb 2020</p>
+    
+      </form>
+    </div>
+  </div> 
+</body>
