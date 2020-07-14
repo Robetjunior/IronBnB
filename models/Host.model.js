@@ -26,6 +26,14 @@ const hostSchema = new Schema(
             type: Boolean,
             require: true,
             default: false
+        }, 
+        descricao:{
+            type: String,
+            trim: true,
+            require: true,
+        },
+        comodidades:{
+            type: String
         }
     }
 );
