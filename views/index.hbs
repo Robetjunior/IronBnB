@@ -1,55 +1,19 @@
+<div class=" text-center">
+    <div class="cover-container flex-column mx-auto"></div>
+    <img class="imgbg" src="./images/backgroundHomePage.png"  alt="Background Homepage">
 
-<style>.btn_white{
-  background-color: white ;
-  width: 40px;
-  height: 38px;
-  border-left:none;
-
-}#local{
-    border:1px solid lightseagreen;
-    border-right:none;
-}
-.imgbg{
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
-    
-}
-.thumbnail {
-    position: relative;
-    text-align: center;
-    color: white;
-    width:100%;
-    height: 100%;
-}
-
-.caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  
-}
-</style>
-
-<div>
-    <img class="imgbg" src="./images/backgroundHomePage.png" class="d-block w-100" alt="">
-
-        <div class="carousel-caption d-none d-md-block d-flex justify-content-center">
-            <h1><img src="/images/icon1.png" alt="" width="60px"></h1> 
-            <form class="align-middle" action="/search" method="GET">
-                <label for="input-host">Procure por uma localidade.</label> 
-                <div class="input-group mb-3 " >
-                    <input name="search" type="text" class="form-control" id="local" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="">
+            <h1><img class="mt-4" src="/images/icon1.png" alt="Ironbnb Icon" width="150px"></h1> 
+            <form class="inner cover" action="/search" method="GET">
+                <label for="input-host"></label> 
+                <div class="input-group mb-3">
+                    <input name="search" type="text" class="form-control" id="local" placeholder="Procure por uma localidade" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn_white btn btn-outline-primary fa fa-search " type="submit"></button>
                     </div>
+                <label for="input-Hospedes">
+                  <input class="form-check-inline search " type="number" style="width: 50px"><span class=" p-1">Nº de Hospedes</span>  <span> <input type="number" class="index-price-search" style="width: 70px">   Preço</span>
+                </label> 
                 </div>
             </form>
         </div>

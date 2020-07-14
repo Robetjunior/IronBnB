@@ -9,13 +9,21 @@
             {{#each host}}
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" src="images/hostExemple.jpg" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+                        <img class="card-img-top" src="/images/hostExemple.jpg" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+                        
                         <div class="card-body">
-                            <h3>{{this.local}}</h1>
+                            <h3>{{this.local}}</h3>
+                            <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis arcu in nibh placerat viverra. Integer dignissim gravida quam et accumsan. Ut at porttitor lorem. Nunc fermentum est vitae pellentesque pulvinar. Duis diam nisi, sodales vel libero id, pellentesque faucibus nunc. Sed dolor dolor, euismod vitae quam eget, dignissim sagittis odio. Donec aliquet condimentum varius.</p>
                             <p class="card-text">{{this.espaco}}</p>
-
-                            <p class="card-text">Qnt de hospedes: {{this.qntHosp}}</p>
-
+                            <p>
+                                <ul class="card-text tags">
+                                    <li class="tag">Praia</li>
+                                    <li class="tag">Ar Condicionado</li>
+                                    <li class="tag">Internet</li>
+                                </ul>
+                            </p>
+                            <p class="card-text"><span class="tag">Qnt de hospedes: {{this.qntHosp}}</span></p>
+                            <p id="description">A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge, cable cars, the former Alcatraz Federal Penitentiary, Fisherm...</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <a href="/search/{{this.id}}" type="button" class="btn btn-sm btn-outline-secondary">
@@ -24,6 +32,12 @@
                                 </div>
                                 <small><strong>R$ {{this.preco}}</strong>/noite</small>
                             </div>
+                            <div id="expander">
+                                <div id="expander-pipe-container">
+                                    <div class="ion-chevron-up" id="expander-arrow">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -31,3 +45,5 @@
         </div>
     </div>
 </div>
+
+
