@@ -54,6 +54,7 @@ router.post('/search/:hostId/reserva', async (req, res) => {
             endDate: endDate,
             guestId: req.session.currentUser._id,
             hostId: result._id,
+            value: result.preco,
             totalValue: result.preco * diffDays
         })
 
