@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 router.get('/search', async (req, res) =>{
     try{
         const localData = await Host.find({"local":req.query.search});
+        console.log(localData);
         res.render('search', {host: localData, userInSession: req.session.currentUser})
     }catch(err){
         throw new Error(err)
@@ -57,7 +58,7 @@ router.post('/search/:hostId/reserva', async (req, res) => {
             totalValue: result.preco * diffDays
         });
 
-        res.render('guest/confirm-host', {reserva: newReserva})
+        res.render('guest/confirm-host', {reserva: newReserva, userInSession: req.session.currentUser})
     }catch(err){
         throw new Error(err);
     }
@@ -65,16 +66,23 @@ router.post('/search/:hostId/reserva', async (req, res) => {
 
 router.get('/search/:hostId/reserva/confirm', async(req, res)=>{
     const hostId = await Host.findById(req.params.hostId);
-    res.render('confirm-host', {host: hostId})
+    res.render('confirm-host', {host: hostId, userInSession: req.session.currentUser})
 })
 
 router.post('/search/:hostId/reserva/confirm', async(req, res)=>{
     try{
-        const hostId = await Host.findById(req.params.hostId);
+        if(!req.session.currentUser){
+            res.redirect('/login')
+        }
 
-        await Reserva.updateOne({"_id": hostId}, {$set: {"reservado": true}})
-        
-        const guestId = await Reserva.findOne({'guestId': req.session.currentUser._id})
+        const result = await Reserva.find({"guestId": req.session.currentUser._id});
+
+        const result1 = await Host.updateOne({"_id": result[0].hostId}, {$set: {"reservado": true}})
+
+        // const guestId = await Reserva.findOne({'guestId': req.session.currentUser._id})
+
+        res.redirect('/userProfile');
+
     }catch(err){
         throw new Error(err)
     }
