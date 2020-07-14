@@ -113,8 +113,6 @@ router.post('/logout', (req, res) => {
 // Protegendo rota privada
 router.get('/userProfile', (req, res) => {
   console.log('your sess exp: ', req.session.cookie.expires);
-  
-  console.log(req.session)
   res.render('users/user-profile', { userInSession: req.session.currentUser });
   // res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
