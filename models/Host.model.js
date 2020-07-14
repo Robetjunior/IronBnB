@@ -21,6 +21,11 @@ const hostSchema = new Schema(
             type: Number,
             require: true,
             trim: true
+        },
+        reservado: {
+            type: Boolean,
+            require: true,
+            default: false
         }
     }
 );
