@@ -3,6 +3,7 @@ const router = new Router();
 const bcryptjs = require('bcryptjs');
 const saltRounds = 10;
 const User = require('../models/User.model');
+const Reserva = require('../models/Reserva.model')
 const mongoose = require('mongoose');
 
 ////////////////////////////////////////////////////////////////////////
@@ -111,9 +112,11 @@ router.post('/logout', (req, res) => {
 // router.get('/userProfile', (req, res) => res.render('users/user-profile'));
 
 // Protegendo rota privada
-router.get('/userProfile', (req, res) => {
+router.get('/userProfile', async (req, res) => {
   console.log('your sess exp: ', req.session.cookie.expires);
-  res.render('users/user-profile', { userInSession: req.session.currentUser });
+  const findReserv = await Reserva.find({"guestId": req.session.currentUser.id})
+  console.log(findReserv)
+  res.render('users/user-profile', { userInSession: req.session.currentUser, findReserv});
   // res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 

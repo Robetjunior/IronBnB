@@ -11,12 +11,12 @@ const reservaSchema = new Schema (
             required: true
         },
         guestId: {
-            type: String,
+            type: [{ type: Schema.Types.ObjectId, ref: 'User' }],
             require: true,
             trim: true
         },
         hostId: {
-            type: String,
+            type: [{ type: Schema.Types.ObjectId, ref: 'Host' }],
             required: true,
             trim: true
         },
