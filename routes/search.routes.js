@@ -49,7 +49,7 @@ router.post('/search/:hostId/reserva', async (req, res) => {
         const diffTime = Math.abs(date2 - date1);
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
 
-        const newReserva = Reserva.create({
+        const newReserva = await Reserva.create({
             startDate: startDate,
             endDate: endDate,
             guestId: req.session.currentUser._id,
@@ -57,7 +57,8 @@ router.post('/search/:hostId/reserva', async (req, res) => {
             totalValue: result.preco * diffDays
         })
 
-        res.send(await newReserva)
+        console.log(newReserva)
+        // res.send(await newReserva)
         res.render('guest/confirm-host', {reserva: newReserva})
     }catch(err){
         throw new Error(err);

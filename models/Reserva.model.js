@@ -20,6 +20,10 @@ const reservaSchema = new Schema (
             required: true,
             trim: true
         },
+        value: {
+            type: Number,
+            require: true
+        },
         totalValue: {
             type: Number,
             required: true
