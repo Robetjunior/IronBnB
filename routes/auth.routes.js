@@ -114,9 +114,13 @@ router.post('/logout', (req, res) => {
 // Protegendo rota privada
 router.get('/userProfile', async (req, res) => {
   console.log('your sess exp: ', req.session.cookie.expires);
+
+  //VERIFICAR ESSA PARTE
   const findReserv = await Reserva.find({"guestId": req.session.currentUser.id})
   console.log(findReserv)
-  res.render('users/user-profile', { userInSession: req.session.currentUser, findReserv});
+  /////////////////////////
+
+  res.render('users/user-profile', { userInSession: req.session.currentUser});
   // res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 
