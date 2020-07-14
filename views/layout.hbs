@@ -16,12 +16,12 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="d-flex flex-grow-1">
+      <div class="d-flex">
         <span class="w-100 d-lg-none d-block"></span>
         <a href="/"><img src="/images/icon1.png" width="150px" alt="Ironbnb Icon"></a>  
       </div>
 
-      <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+      <div class="collapse navbar-collapse flex-grow-3s text-right" id="myNavbar7">
         <ul class="navbar-nav ml-auto flex-nowrap">    
           {{#if userInSession}}
             <li class="nav-item">
@@ -40,18 +40,20 @@
         </ul>
       </div>
     </nav>
-
+    <article>
     <div id="#page-container">
         <div id="content-wrap">
         {{{body}}}
        </div>
   
     </div>
+    </article>
     <footer class="footer ">
         Developed by José and Eduardo
     </footer>
     
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/br.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="/javascripts/script.js"></script>

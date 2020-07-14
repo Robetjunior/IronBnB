@@ -1,10 +1,10 @@
-var expander = $('#expander');
-var expanderArrow = $('#expander-arrow');
-var info = $('#info');
-var description = $('#description');
-var expanded = false;
+let expander = $('.expander');
+let expanderArrow = $('.expander-arrow');
+let info = $('#info');
+let description = $('.description');
+let expanded = false;
 
-expander.on( 'click', function() {
+  expander.on( 'click', function() {
   expand();
 })
 
@@ -24,3 +24,28 @@ function expand() {
   }
   expanded = !expanded;
 }
+
+let expList = document.getElementsByClassName("expander");
+let expAdd = 0;
+for (let i = 0; i < expList.length; i++) {
+  expAdd++;
+  expList[i].id = "expansor" + expAdd;
+}
+
+
+let classes = document.getElementsByClassName("description");
+let idnum = 0;
+for (let i = 0; i < classes.length; i++) {
+  idnum++;
+  classes[i].id = "descricao" + idnum;
+
+}
+
+
+// let arrows = document.getElementsByClassName("expander-arrow");
+// let idnum = 0;
+// for (let i = 0; i < arrows.length; i++) {
+//   idMore++;
+//   arrows[i].id = "expander-arrow" + idMore;
+// }
+

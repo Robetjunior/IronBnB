@@ -14,8 +14,8 @@
                 <h3>Preco: {{this.preco}}/noite</h3>
 
                 <form action="/search/{{this.id}}/reserva" class="form-signin" method="POST">
-                    Checkin <input  name="startDate" style="width:40%" type="date"> 
-                    Checkout <input name="endDate" style="width:40%"type="date">
+                    Checkin <input id="checkin" name="startDate" style="width:40%" type="date"> 
+                    Checkout <input id="checkout" name="endDate" style="width:40%"type="date">
                     <button type="submit" class="btn btn-sm btn-outline-secondary">
                         Reservar
                     </button>
