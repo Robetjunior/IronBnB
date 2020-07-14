@@ -13,7 +13,13 @@
                         
                         <div class="card-body">
                             <h3>{{this.local}}</h3>
-                            <p id="description">{{this.descricao}}</p>
+                            <div class="expander">
+                                <div id="expander-pipe-container">
+                                    <div class="ion-chevron-up expander-arrow" >
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="description">{{this.descricao}}</p>
                             <p class="card-text">{{this.espaco}}</p>
                             <p>
                                 <ul class="card-text tags">
@@ -31,12 +37,7 @@
                                 </div>
                                 <small><strong>R$ {{this.preco}}</strong>/noite</small>
                             </div>
-                            <div id="expander">
-                                <div id="expander-pipe-container">
-                                    <div class="ion-chevron-up" id="expander-arrow">
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

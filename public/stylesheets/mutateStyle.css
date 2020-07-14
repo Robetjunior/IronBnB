@@ -49,7 +49,7 @@ body {
     padding: 2px 8px;
   }
   
-  #description {
+  .description {
     display: none;
     color: #666;
     font-weight: 300;
@@ -62,7 +62,7 @@ body {
     float: right;
   }
   
-  #expander {
+  .expander {
     position: absolute;
     top: 220px;
     right: 30px;
@@ -74,7 +74,7 @@ body {
     
   }
   
-  #expander:hover {
+  .expander:hover {
     cursor: pointer;
   }
   
@@ -95,6 +95,26 @@ body {
     transform: rotate(180deg);
   }
 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   body {
     font-family: Avenir Next, Avenir, SegoeUI, sans-serif;
   }
@@ -201,13 +221,14 @@ body {
       border-right:none;
   }
   .imgbg{
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: auto;
-      position: fixed;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      width: 100% !important;
+      height: auto !important;
+      position: fixed !important;
       z-index: -1;
       display: flex;
+      top: 0;
   }
   .thumbnail {
       position: relative;
@@ -236,4 +257,3 @@ body {
     left: 50%
   }
 
- 
