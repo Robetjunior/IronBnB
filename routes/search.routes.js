@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 //filtra os hosts do local
 router.get('/search', async (req, res) =>{
     try{
-        const localData = await Host.find({"local":req.query.search});
+        const localData = await Host.find({"local":req.query.search, "reservado": false});
         console.log(localData);
         res.render('search', {host: localData, userInSession: req.session.currentUser})
     }catch(err){
@@ -31,7 +31,7 @@ router.get('/search/:hostId', async (req, res) =>  {
 //     const {startDate, endDate} = req.body;
 
 //     console.log(startDate, endDate)
-//     red
+//     red nModified: 0
 // })
 
 router.post('/search/:hostId/reserva', async (req, res) => {
@@ -74,13 +74,12 @@ router.post('/search/:hostId/reserva/confirm', async(req, res)=>{
         if(!req.session.currentUser){
             res.redirect('/login')
         }
+        console.log(req.params)
 
-        const result = await Reserva.find({"guestId": req.session.currentUser._id});
+        const result1 = await Host.updateOne({"_id": req.params.hostId}, {$set: {"reservado": true}})
 
-        const result1 = await Host.updateOne({"_id": result[0].hostId}, {$set: {"reservado": true}})
-
-        // const guestId = await Reserva.findOne({'guestId': req.session.currentUser._id})
-
+        console.log(result1)
+        
         res.redirect('/userProfile');
 
     }catch(err){

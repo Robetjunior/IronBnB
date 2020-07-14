@@ -1,5 +1,4 @@
 <div class="container">
-    <h2>FOI</h2>
     {{#with reserva}}
         <div class="row">
             <div class="col-md-4 order-md-2 mb-4">
@@ -27,7 +26,7 @@
                     </li>
                 </ul>
 
-                <form action="/search/{{this.id}}/reserva/confirm" class="form-signin" method="POST">
+                <form action="/search/{{this.hostId}}/reserva/confirm" class="form-signin" method="POST">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Promo code">
                         <div class="input-group-append">
