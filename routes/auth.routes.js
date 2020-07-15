@@ -5,6 +5,7 @@ const saltRounds = 10;
 const User = require('../models/User.model');
 const Reserva = require('../models/Reserva.model')
 const mongoose = require('mongoose');
+const moment = require('moment')
 
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SIGNUP //////////////////////////////////
@@ -116,11 +117,19 @@ router.get('/userProfile', async (req, res) => {
   console.log('your sess exp: ', req.session.cookie.expires);
 
   //VERIFICAR ESSA PARTE
-  const findReserv = await Reserva.find({"guestId": req.session.currentUser.id})
+  const findReserv = await Reserva.find().populate("hostId").exec();
+
+  // for(let i=0; i<=findReserv.length; i+=1){
+  //   findReserv[i].startDate = moment(findReserv[i].startDate).format('DD/MM/YYYY');
+  //   findReserv[i].endDate = moment(findReserv[i].endDate).format('DD/MM/YYYY');
+  //   console.log(moment(findReserv[i].startDate).format('DD/MM/YYYY'))
+  // }
+
+
   console.log(findReserv)
   /////////////////////////
 
-  res.render('users/user-profile', { userInSession: req.session.currentUser});
+  res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: findReserv});
   // res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 

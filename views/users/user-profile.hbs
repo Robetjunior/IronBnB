@@ -19,6 +19,33 @@
 
             <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
                 <h1>Reservas</h1>
+                <div class="row">
+                {{#each reservas}}
+
+                     <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="/images/hostExemple.jpg" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+                        
+                        <div class="card-body">
+                            {{#each this.hostId}}
+                                <h3>{{this.local}}</h3>
+                            {{/each}}
+                                <div class="expander">
+                                <div id="expander-pipe-container">
+                                    <div class="ion-chevron-up expander-arrow" >
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text"><span class="tag">Qnt de hospedes: {{this.qntHosp}}</span></p>
+                                <small><strong>R$ {{this.totalValue}}</strong></small>
+                            </div>
+                            <p>Checkin {{this.startDate}}</p>
+                            <p>Checkout {{this.endDate}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                </div>
             </div>
         
     </div>
