@@ -146,8 +146,11 @@ ul li {
 }
 
 
-#btn_white{
+.btn_white{
   background-color: white ;
+  border-right:none !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
 }
 #div-center{
   align-content: center;
@@ -191,6 +194,8 @@ ul li {
 	padding: 20px;
 	width: 100%; 
 }
+
+
 .corpo{
 	margin: 0;
     padding: 0;
@@ -236,7 +241,7 @@ ul li {
     width: 101%;
     height: 100px;;
     padding: 12px;
-    background: #0070cc;;
+    background: #008bcc;;
     transition: all 0.5s cubic-bezier(.48, -0.28, 0.41, 1.4);
     box-sizing: border-box;;
     overflow: hidden;
@@ -274,3 +279,4 @@ h2{
 	border-radius: 10%;
     box-shadow: 0 0 5em rgba(0, 0 ,0 0.4);
 }
+
