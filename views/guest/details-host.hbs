@@ -1,10 +1,27 @@
 <div class="container">
     {{#with host}}
-        <img class="card-img-top" src="images/hostExemple.jpg" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
-        <h1>{{this.local}}</h1>
-        <h2>Tipo de host: {{this.espaco}} | Qntd de hospedes: {{this.qntHosp}}</h2>
-        <a href="/search/{{this.id}}/reserva" type="button" class="btn btn-sm btn-outline-secondary">
-            Reservar
-        </a>
+        <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+            <img class="card-img-top" src="/images/hostExemple.jpg" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+        </div>
+
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+            <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <h2>{{this.local}}</h2>
+                <h4>Tipo de host: {{this.espaco}} | Qntd de hospedes: {{this.qntHosp}}</h4>
+            </div>
+            <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"> 
+
+                <h3>Preco: {{this.preco}}/noite</h3>
+
+                <form action="/search/{{this.id}}/reserva" class="form-signin" method="POST">
+                    Checkin <input id="checkin" name="startDate" style="width:40%" type="date"> 
+                    Checkout <input id="checkout" name="endDate" style="width:40%"type="date">
+                    <button type="submit" class="btn btn-sm btn-outline-secondary">
+                        Reservar
+                    </button>
+                </form>
+            </div>
+        </div>
+        
     {{/with}}
 </div>

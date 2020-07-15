@@ -1,36 +1,25 @@
+<div class=" text-center">
+    <div class="cover-container flex-column mx-auto">
+        <img class="imgbg" src="./images/backgroundHomePage.png" width="100%" height="100%" alt="Background Homepage">
 
-<style>.btn_white{
-  background-color: white ;
-  width: 40px;
-  height: 38px;
-  border-left:none;
+            <div class="form-center">
+                <h1><img class="mt-4" src="/images/icon1.png" alt="Ironbnb Icon" width="150px"></h1> 
 
-}#local{
-    border:1px solid lightseagreen;
-    border-right:none;
-}
-.imgbg{
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
-}
+                {{!-- FORMULARIO DE PESQUISA DE HOSTS --}}
+                <form class="inner cover" action="/search" method="GET">
+                    <div class="input-group mb-3">
+                        <input name="search" type="text" class="form-control" id="local" placeholder="Procure por uma localidade" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <label for="number">
+                            <input class="form-check-inline search" id="number" name="number" type="number" min="0" max="10"  style="width: 50%">
+                            <span class=" p-1">Nº de Hospedes</span>
+                        </label> 
+                        
+                        <div class="input-group-append">
+                            <button class="btn_white btn btn-outline-primary fa fa-search " type="submit"></button>
+                        </div>
 
-</style>    
-
-<div>
-    <img class="imgbg" src="./images/backgroundHomePage.png" class="d-block w-100" alt="">
-
-        <div class="carousel-caption d-none d-md-block d-flex justify-content-center">
-            <h1><img src="/images/icon1.png" alt="" width="60px"></h1> 
-            <form class="align-middle" action="/search" method="GET">
-            <label for="input-host">Procure por uma localidade.</label> 
-            <div class="input-group mb-3 " >
-                <input name="search" type="text" class="form-control" id="local" placeholder="Search..." aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="btn_white btn btn-outline-primary fa fa-search " type="submit"></button>
-                </div>
+                    </div>
+                </form>
             </div>
-            </form>
-        </div>
+    </div>
 </div>

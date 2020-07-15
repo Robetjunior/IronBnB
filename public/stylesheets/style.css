@@ -1,7 +1,14 @@
+html{
+  height:100%
+}
+
 body {
-  
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  position:relative;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  background-image: url(/public/images/backgroundHomePage.png)!important;
+  
 }
 
 a {
@@ -50,7 +57,7 @@ form button {
 
 form button:hover {
   background: #fff;
-  color: #43a3e6;
+  color: #43a3e6 ;
   transition: 0.3s ease background;
 }
 
@@ -126,22 +133,63 @@ ul li {
 }
 
 .footer{
-  background:#0a2c42;
+  background:#014547;
   color: #fff;
   padding:15px;
-  display: flex;
+  display: block;
   align-items:center;
   justify-content: flex-start;
-  bottom: 0px;
-  position: fixed;
+  bottom: 0;
   width: 100%;
+  height: 2.5rem; 
+  position: absolute;
 }
 
 #btn_white{
-  background-color: white !important;
+  background-color: white ;
 }
-
+#btn_white{
+  background-color: white ;
+}
 #div-center{
   align-content: center;
   
+}
+#page-container {
+  position: relative;
+  min-height: 800px;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+
+.index-N-hospedes-search{
+  background-color: white;
+  color: #0a68ac!important;
+}
+
+.index-price-search{
+  background-color: white!important;
+  color: #0a68ac!important
+  
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+#logoSpot {
+  font-size: 50px;
+}
+.error-message {
+	background: #F02B63;
+	box-sizing: border-box;
+	color: #fff;
+	margin: 20px auto;
+	padding: 20px;
+	width: 100%; 
 }

@@ -16,6 +16,24 @@ const hostSchema = new Schema(
         qntHosp:{
             type: Number,
             required: true
+        },
+        preco:{
+            type: Number,
+            require: true,
+            trim: true
+        },
+        reservado: {
+            type: Boolean,
+            require: true,
+            default: false
+        }, 
+        descricao:{
+            type: String,
+            trim: true,
+            require: true,
+        },
+        comodidades:{
+            type: String
         }
     }
 );
