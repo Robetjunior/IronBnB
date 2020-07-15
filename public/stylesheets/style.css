@@ -263,8 +263,14 @@ ul li {
     transition: 0.3s;
     text-align: justify;
     opacity: 0;
+}.content h5.description{
+-webkit-line-clamp: 5;
+overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+color: white;
 }
-
 .card_new:hover .content p{
 	border-radius: 10%;
     transform:translateY(0) ;
