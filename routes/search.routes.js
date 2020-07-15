@@ -7,8 +7,12 @@ const mongoose = require('mongoose');
 //filtra os hosts do local
 router.get('/search', async (req, res) =>{
     try{
-        const localData = await Host.find({"local":req.query.search, "reservado": false});
-        console.log(localData);
+        const number  = req.query.number;
+        if(!number){
+            const localData = await Host.find({"local":req.query.search, "reservado": false});
+            res.render('search', {host: localData, userInSession: req.session.currentUser})
+        }
+        const localData = await Host.find({"local":req.query.search, "reservado": false, "qntHosp": number});
         res.render('search', {host: localData, userInSession: req.session.currentUser})
     }catch(err){
         throw new Error(err)
@@ -24,15 +28,6 @@ router.get('/search/:hostId', async (req, res) =>  {
         throw new Error(err);
     }
 });
-
-
-// // Testes para direcionar form 
-// router.post('/search/:hostId', (req, res, next) => {
-//     const {startDate, endDate} = req.body;
-
-//     console.log(startDate, endDate)
-//     red nModified: 0
-// })
 
 router.post('/search/:hostId/reserva', async (req, res) => {
     try{

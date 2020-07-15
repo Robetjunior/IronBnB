@@ -1,5 +1,19 @@
 <section class="jumbotron text-center">
-
+     <form class="inner cover " action="/search" method="GET">
+                <div class="form-inline justify-content-center" style="background-color: rgba(7, 0, 0, 0.4); border-radius: 10px">
+                    <div class="col-md-4 mr-4  justify-content-center" >
+                     <label for="validationCustom01"  class="" style="color:white ;font-size:10px ;margin:3px 2px 2px; ">Localização</label>
+                    <input name="search" type="text" class="form-control "  id="search" style="bottom:2px"! placeholder="Para onde você quer ir?" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    </div>
+                    <div class="col-md-4 ml-4" style="left:10%">
+                        <label for="validationCustom01" style="color:white ;font-size:10px ;margin:3px 2px 2px; ">Hóspedes</label>
+                    <input name="number" type="number" id="number" class=" form-control" in="0" max="10" type="number" style="width:25px" id="local" placeholder="0">
+                    </div>
+                    <div class="input-group-append">
+                        <button class="btn_white btn btn-outline-primary fa fa-search mt-3"  type="submit"></button>
+                    </div>
+                </div>
+            </form>
 </section>
 
 {{!-- Filtro da Pesquisa de Hosts --}}
