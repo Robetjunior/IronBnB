@@ -1,5 +1,16 @@
 <section class="jumbotron text-center">
-
+    <form class="inner cover" action="/search" method="GET">
+        <div class="input-group mb-3">
+            <input name="search" type="text" class="form-control" id="local" placeholder="Procure por uma localidade" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <label for="number">
+                <input class="form-check-inline search" id="number" name="number" type="number" min="0" max="10"  style="width: 50%">
+                <span class=" p-1">Nº de Hospedes</span>
+            </label> 
+            <div class="input-group-append">
+                <button class="btn_white btn btn-outline-primary fa fa-search " type="submit"></button>
+            </div>
+        </div>
+    </form>
 </section>
 
 {{!-- Filtro da Pesquisa de Hosts --}}
