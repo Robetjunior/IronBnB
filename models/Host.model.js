@@ -8,29 +8,37 @@ const hostSchema = new Schema(
             required: [true, 'Local is required'],
             trim: true,
         },
+        title:{
+            type: String,
+            trim: true,
+            required: [true, 'Title is required']
+        },
+        imgPath:{
+            type:String,
+            required: true
+        },
         espaco:{
             type: String,
             enum: ['Quarto inteiro', 'Espaco inteiro', 'Quarto compartilhado'],
             required: true,        
         },
         qntHosp:{
-            type: Number,
+            type: [Number, 'QntHosp is required'],
             required: true
         },
         preco:{
-            type: Number,
-            require: true,
-            trim: true
+            type: [Number, 'Price is required'],
+            required: true,
+            trim: true            
         },
         reservado: {
             type: Boolean,
-            require: true,
             default: false
         }, 
         descricao:{
-            type: String,
+            type: [String, 'Description is required'],
             trim: true,
-            require: true,
+            required: true,
         },
         comodidades:{
             type: String

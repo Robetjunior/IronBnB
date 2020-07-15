@@ -26,11 +26,13 @@
                     <div class="card mb-4 shadow-sm" style="	border-radius: 10%;">
                        <div class="card_new card-img-top" style="	border-radius: 10%;">
                             <div class=" card-body imgbox" style="	border-radius: 10%;">
-                                <img class="img_host" src="/images/hostExemple.jpg" style="	border-radius: 10%;" width="350px" height="450px" alt="tah">
+                                <img class="img_host" src="/images/{{this.imgPath}}" style="	border-radius: 10%;" width="350px" height="450px" alt="tah">
                             </div>
                             <div class="content">
-                                <h3 class="ml-4">{{this.local}}</h3>
-                                {{!-- <h5 class="description">{{this.descricao}} </h5> --}}
+
+                                <h3 class="ml-4">{{this.title}}</h3>
+                                <h5 class="description">{{this.descricao}} </h5>
+
                                 <h5 class="tag mt-4">{{this.espaco}}</h5>
                                 <h5 class="tag mt-4" style="overflow-wrap: break-word"> Praia</h5></span>
                                 <h5 class="card-text tag mt-4">Internet</h5>
