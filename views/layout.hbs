@@ -22,11 +22,17 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="height: 70px;">
-      <div class="">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark " style="height: 70px;">
+      
         <span class="w-100 d-lg-none d-block"></span>
         <a href="/"><img src="/images/icon1.png" width="150px" alt="Ironbnb Icon"></a>  
-      </div>
+      <form class="form-inline" action="/search" method="GET">
+    
+     <input name="search" type="text" class="form-control" id="local" placeholder="Search.. " aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn_white btn btn-outline-primary fa fa-search " style="left:-10%" type="submit"></button>
+        </div>
+  </form>
 
       <div class="collapse navbar-collapse flex-grow-3s text-right" id="myNavbar7">
         
