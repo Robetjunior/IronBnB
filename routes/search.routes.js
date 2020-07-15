@@ -7,9 +7,8 @@ const mongoose = require('mongoose');
 //filtra os hosts do local
 router.get('/search', async (req, res) =>{
     try{
-        const  number   = req.query.number;
-        console.log('numero de hospedes ==> ',number)
-        if(number === undefined){
+        const number  = req.query.number;
+        if(!number){
             const localData = await Host.find({"local":req.query.search, "reservado": false});
             res.render('search', {host: localData, userInSession: req.session.currentUser})
         }
