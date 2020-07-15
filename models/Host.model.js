@@ -41,7 +41,7 @@ const hostSchema = new Schema(
             required: true,
         },
         comodidades:{
-            type: String
+            type: [String]
         }
     }
 );

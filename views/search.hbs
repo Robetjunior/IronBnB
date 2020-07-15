@@ -34,7 +34,9 @@
                                 <h5 class="description">{{this.descricao}} </h5>
 
                                 <h5 class="tag mt-4">{{this.espaco}}</h5>
-                                <h5 class="tag mt-4" style="overflow-wrap: break-word"> Praia</h5></span>
+                                {{#each comodidades}}
+                                    <h5 class="tag mt-4" style="overflow-wrap: break-word"> {{this}}</h5></span>
+                                {{/each}}
                                 <h5 class="card-text tag mt-4">Internet</h5>
                                 <h5 class="card-text mt-2"><span class="tag">Qnt de hospedes: {{this.qntHosp}}</span></h5>
                                 <div class="d-flex justify-content-between align-items-center">
