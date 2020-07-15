@@ -13,10 +13,10 @@ const passport =require("passport")
 ////////////////////////////////////////////////////////////////////////
 
 // .get() route ==> to display the signup form to users
-router.get('/signup', (req, res) => res.render('auth/signup', {userInSession: req.session.currentUser}));
+router.get('/login/create', (req, res) => res.render('auth/signup', {userInSession: req.session.currentUser}));
 
 // .post() route ==> to process form data
-router.post('/signup', (req, res, next) => {
+router.post('/login/create', (req, res, next) => {
   const { username, email, password } = req.body;
 
   if (!username || !email || !password) {
@@ -46,7 +46,7 @@ router.post('/signup', (req, res, next) => {
     })
     .then(userFromDB => {
       console.log('Newly created user is: ', userFromDB);
-      res.redirect('/userProfile');
+      res.redirect('/login');
     })
     .catch(error => {
       if (error instanceof mongoose.Error.ValidationError) {
