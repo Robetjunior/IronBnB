@@ -6,6 +6,7 @@ const User = require('../models/User.model');
 const Reserva = require('../models/Reserva.model')
 const mongoose = require('mongoose');
 const moment = require('moment')
+const passport =require("passport")
 
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SIGNUP //////////////////////////////////
@@ -133,6 +134,29 @@ router.get('/userProfile', async (req, res) => {
   // res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 
+router.get("/auth/facebook",
+  passport.authenticate("facebook",
+    {
+      data: [
+        {
+          "permission": "public_profile",
+          "status": "granted"
+        }
+      ]
+    }));
 
+  // one way back from facebook
+router.get("/auth/facebook/callback",
+  passport.authenticate("facebook", {
+    successRedirect: "/test",
+    failureRedirect: "/login"
+  }),
+);
+
+
+router.get("/test", (req, res) => {
+  console.log("testtttt")
+  res.redirect("/places")
+})
 
 module.exports = router;
