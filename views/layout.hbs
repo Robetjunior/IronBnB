@@ -2,26 +2,40 @@
 <html lang="en">
 
   <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="/stylesheets/mutateStyle.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.less">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="/stylesheets/mutateStyle.css">  
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+      <link rel="stylesheet" href="/stylesheets/style.css">
+
   </head>
 
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="d-flex">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark " style="height: 70px;">
+      
         <span class="w-100 d-lg-none d-block"></span>
         <a href="/"><img src="/images/icon1.png" width="150px" alt="Ironbnb Icon"></a>  
-      </div>
+      <form class="form-inline" action="/search" method="GET">
+    
+     <input name="search" type="text" class="form-control" id="local" placeholder="Search.. " aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn_white btn btn-outline-primary fa fa-search " style="left:-10%" type="submit"></button>
+        </div>
+  </form>
 
       <div class="collapse navbar-collapse flex-grow-3s text-right" id="myNavbar7">
+        
         <ul class="navbar-nav ml-auto flex-nowrap">    
           {{#if userInSession}}
             <li class="nav-item">
@@ -53,11 +67,12 @@
     </footer>
     
   </body>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/br.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="/javascripts/script.js"></script>
-    <script src="/javascripts/searchDetailsArrow.js"></script>
+    <script src="/javascripts/searchDetailsArrow.js"></script> 
   </body>
 
 </html>
