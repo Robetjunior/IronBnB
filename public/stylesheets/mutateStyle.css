@@ -1,5 +1,5 @@
 body {
-    background-color: #D9E6EE;
+    background-color: #ffffff;
     font-family: sans-serif;
   }
   
@@ -218,8 +218,29 @@ body {
   }
   #local{
       border:1px solid lightseagreen;
-      border-right:none;
+      border-right:none!important;
+      width: 500px !important;
+      right:1%;
+     
+      border-top-right-radius: 0!important;
+      border-bottom-right-radius: 0!important;
   }
+  .form-inline{
+    width: 500px!important;
+  }
+  #number{
+    border:1px solid lightseagreen;
+    border-right:none!important;
+    border-left:none!important;
+    width: 50% !important;
+    border-radius: 0!important;
+}
+#search{
+  border:1px solid lightseagreen;
+  width: 220%  ;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
   .imgbg{
       background-size: contain !important;
       background-repeat: no-repeat !important;
