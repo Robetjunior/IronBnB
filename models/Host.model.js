@@ -8,7 +8,7 @@ const hostSchema = new Schema(
             required: [true, 'Local is required'],
             trim: true,
         },
-        guestId: {
+        ownerId: {
             type: [{ type: Schema.Types.ObjectId, ref: 'User' }],
             trim: true
         },

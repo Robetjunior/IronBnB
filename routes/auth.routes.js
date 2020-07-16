@@ -154,8 +154,9 @@ router.get('/userProfile', async (req, res) => {
 ////////////////////////////////////////////////////////////////////////
 router.get('/host', async (req, res) => {
   //verificar se  tem host criado pelo o usuario logado e apresentar na tela 
-
-  res.render('hoster/managment-host', {userInSession: req.session.currentUser})
+  const hosts = await HostModel.find({"ownerId": req.session.currentUser._id});
+  console.log(hosts)
+  res.render('hoster/managment-host', {userInSession: req.session.currentUser, hosts})
 });
 
 
@@ -168,9 +169,8 @@ router.get('/host/create', async(req, res) => res.render('hoster/new-host', {use
 router.post('/host/create', fileUploader.single("imgPath"), (req,res) => {
     const { local, title, espaco, qntHosp, preco } = req.body;
 
-    console.log(req.file)
 
-    HostModel.create({local, title, espaco, qntHosp, preco, imgPath: req.file.url})
+    HostModel.create({local, title, espaco, qntHosp, preco, imgPath: req.file.url, ownerId: req.session.currentUser._id})
       .then((data)=>{
         console.log(data);
         res.redirect('/host');
