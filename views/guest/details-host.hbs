@@ -1,11 +1,16 @@
+<div class="jumbotron text-center" style="padding: 10px!imporante;background-color: rgba(7, 0, 0, 0.1)!important">
+    <div class="jumbotron text-center" style="padding: 10px!imporante;background-color: rgba(7, 0, 0, 0.1)!important">
+        
+<div class="jumbotron text-center" style="padding: 10px!imporante;background-color: rgba(7, 0, 0, 0.1)!important">
+
 <div class="container">
     {{#with host}}
         <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
             <img class="card-img-top" src="/images/{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
         </div>
 
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class=" d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+            <div class=" jumbotron text-centerbg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
                 <h2>{{this.title}}</h2>
                 <p>Tipo de host: {{this.espaco}} | Qntd de hospedes: {{this.qntHosp}}</p>
                 <p>{{this.descricao}}</p>
@@ -13,7 +18,7 @@
                     <p>{{this}}</p>
                 {{/each}}
             </div>
-            <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"> 
+            <div class=" jumbotron text-center bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"> 
 
                 <h3>Preco: {{this.preco}}/noite</h3>
 
@@ -28,4 +33,5 @@
         </div>
         
     {{/with}}
+</div>
 </div>
