@@ -5,8 +5,8 @@
         height: 95vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(./images/backgroundHomePage.png);
-
+        background-color: rgba(51, 20, 2, 0.5);
+z-index: 2;
         background-position: center;
         display: flex;
         justify-content: center;
@@ -77,28 +77,42 @@
     }
     
 </style>
- <div class="cabeca">
+ <div class="cabeca" >
 
 
     
 <form class="inner cover " action="/search" method="GET">
-<div class="">
-    <form action="">
-        <h1>Ironbnb</h1>
+<div style="">
+   
+        <div > 
+        <h1 style="z-index: 3!important"></h1></div>
             <div class="form-row div-form  ">
-                <div class="col pl-4"> <label for="search" class="ml-4 " style="color: white  ;margin:3px 2px 2px; ">Localização</label>
-                    <input type="text"class="search-field pesquisa-local"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2"> </div>
-                    <div class="col">  
-                        <label for="name" class="ml-4 pl-4g" style="color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
-                        <input type="number"  name="number" id="number" class="pr-4 search-field pesquisa-hospedes" placeholder="0-10" min="0" max="10" type="number" > 
-                    </div>                 
-                    <div class="col" >
+                
+                <div class="col pl-4"style="z-index: 3!important; " > 
+                    <label for="search" class="ml-4 "  style=" color: white  ;margin:3px 2px 2px; ">Localização</label>
+                    <input type="text"class="search-field pesquisa-local"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2"> 
+                </div>
+                    
+                <div class="col" style="z-index: 3!important; ">  
+                    <label for="name" class="ml-4 pl-4g" style="color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
+                    <input type="number"  name="number" id="number" class="pr-4 search-field pesquisa-hospedes" placeholder="0-10" min="0" max="10" type="number" > 
+                </div> 
+                                    
+                <div class="col" style="z-index: 3!important; " >
                     <label for="name" style="color:transparent ;10px ;margin:3px 2px 2px; ">___</label>
-                    <button class="search-botao fa fa-search   " type="submit"></button>
-                    </div>
+                    <button class="search-botao    fa fa-search   "  type="submit"></button>
+                </div>
                 </div>
          </form>
     </div>
 </div>
             </form>
   
+
+    <div class="crossfade" >
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+    </div>
