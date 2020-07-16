@@ -8,17 +8,20 @@ const mongoose = require('mongoose');
 const moment = require('moment')
 const passport =require("passport")
 
+// Instancia do Multer/Cloudnary
+const fileUploader = require('../configs/cloudnary.config');
+
+//funcao formatar data
 const dateFormaterYear = (s) => {
-  const newArr = s.split("-");
-  
-  let year = newArr[0];
-  let month = newArr[1];
+  const newArr = s.toString().split(" ");
+
+  let year = newArr[3];
   let day = newArr[2];
+  let month = newArr[1];
   
-  s = `${day}/${month}/${year}`;
-  
-  return s;
+  return `${day}/${month}/${year}`;
 }; 
+
 
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SIGNUP //////////////////////////////////
@@ -39,7 +42,7 @@ router.post('/login/create', (req, res, next) => {
   // make sure passwords are strong:
   const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
   if (!regex.test(password)) {
-    res
+    resdateFormaterYear
       .status(500)
       .render('auth/signup', { errorMessage: 'Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter.', userInSession: req.session.currentUser });
     return;
@@ -82,7 +85,6 @@ router.get('/login', (req, res) => res.render('auth/login', {userInSession: req.
 
 // .post() login route ==> to process form data
 router.post('/login', (req, res, next) => {
-  // console.log('SESSION =====> ', req.session);
   const { email, password } = req.body;
 
   if (email === '' || password === '') {
@@ -115,64 +117,31 @@ router.post('/login', (req, res, next) => {
     .catch(error => next(error));
 });
 
+
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////// LOGOUT ////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-
 router.post('/logout', (req, res) => {
   req.session.destroy();
   res.redirect('/');
 });
-// router.get('/userProfile', (req, res) => res.render('users/user-profile'));
 
-// Protegendo rota privada
+////////////////////////////////////////////////////////////////////////
+////////////////////PROTEGENDO ROTA PRIVADA/////////////////////////////
+////////////////////////////////////////////////////////////////////////
 router.get('/userProfile', async (req, res) => {
   console.log('your sess exp: ', req.session.cookie.expires);
 
   //VERIFICAR ESSA PARTE
   const findReserv = await Reserva.find().populate("hostId").exec();
+  // const startDateFormated = findReserv.map(reserva=> {
+  //   return reserva.startDate = dateFormaterYear(reserva.startDate);   
+  // })
 
-  // for(let i=0; i<=findReserv.length; i+=1){
-  //   findReserv[i].startDate = moment(findReserv[i].startDate).format('DD/MM/YYYY');
-  //   findReserv[i].endDate = moment(findReserv[i].endDate).format('DD/MM/YYYY');
-  //   console.log(moment(findReserv[i].startDate).format('DD/MM/YYYY'))
-  // }
-  
-  
+  // const endDateFormated = findReserv.map(reserva=> {
+  //   return reserva.endDate = dateFormaterYear(reserva.endDate);   
+  // })
   res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: findReserv});
-  // res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
-
-// router.get("/auth/facebook",
-//   passport.authenticate("facebook",
-//     {
-//       data: [
-//         {
-//           "permission": "public_profile",
-//           "status": "granted"
-//         }
-//       ]
-//     }));
-
-//   // one way back from facebook
-// router.get("/auth/facebook/callback",
-//   passport.authenticate("facebook", {
-//     successRedirect: "/test",
-//     failureRedirect: "/login"
-//   }),
-// );  // one way back from facebook
-// router.get("/auth/facebook/callback",
-//   passport.authenticate("facebook", {
-//     successRedirect: "/test",
-//     failureRedirect: "/login"
-//   }),
-// );
-
-
-// router.get("/test", (req, res) => {
-//   console.log("testtttt")
-//   res.redirect("/places")
-// })
-// })
 
 module.exports = router;
