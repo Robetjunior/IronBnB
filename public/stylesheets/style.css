@@ -226,7 +226,7 @@ ul li {
 	border-radius: 10%!important;
 	border: 0 solid white;
     position: absolute;
-    top:0;
+    top:10%;
     left:0;
     width: 100%;
     height: 80%;
@@ -251,7 +251,7 @@ ul li {
 .card_new:hover .content{
 	border-radius: 10%;
     width: 101%;
-    height:45%;
+    height:60%;
     left:-1px;
     bottom:0;
 }

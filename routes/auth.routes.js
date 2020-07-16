@@ -25,7 +25,7 @@ const dateFormaterYear = (s) => {
 ////////////////////////////////////////////////////////////////////////
 
 // .get() route ==> to display the signup form to users
-router.get('/login/create', (req, res) => res.render('auth/signup', {userInSession: req.session.currentUser}));
+router.get('/login/create ', (req, res) => res.render('auth/login', {userInSession: req.session.currentUser}));
 
 // .post() route ==> to process form data
 router.post('/login/create', (req, res, next) => {
@@ -62,9 +62,9 @@ router.post('/login/create', (req, res, next) => {
     })
     .catch(error => {
       if (error instanceof mongoose.Error.ValidationError) {
-        res.status(500).render('auth/signup', { errorMessage: error.message, userInSession: req.session.currentUser });
+        res.status(500).render('auth/login', { errorMessage: error.message, userInSession: req.session.currentUser });
       } else if (error.code === 11000) {
-        res.status(500).render('auth/signup', {
+        res.status(500).render('auth/login', {
           errorMessage: 'Username and email need to be unique. Either username or email is already used.', userInSession: req.session.currentUser
         });
       } else {
