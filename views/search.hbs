@@ -1,21 +1,22 @@
-<section class="jumbotron text-center">
-     <form class="inner cover " action="/search" method="GET">
-                <div class="form-inline justify-content-center" style="background-color: rgba(7, 0, 0, 0.4); border-radius: 10px">
-                    <div class="col-md-4 mr-4  justify-content-center" >
-                     <label for="validationCustom01"  class="" style="color:white ;font-size:10px ;margin:3px 2px 2px; ">Localização</label>
-                    <input name="search" type="text" class="form-control "  id="search" style="bottom:2px"! placeholder="Para onde você quer ir?" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    </div>
-                    <div class="col-md-4 ml-4" style="left:10%">
-                        <label for="validationCustom01" style="color:white ;font-size:10px ;margin:3px 2px 2px; ">Hóspedes</label>
-                    <input name="number" type="number" id="number" class=" form-control" in="0" max="10" type="number" style="width:25px" id="local" placeholder="0">
-                    </div>
-                    <div class="input-group-append">
-                        <button class="btn_white btn btn-outline-primary fa fa-search mt-3"  type="submit"></button>
-                    </div>
+<div class="jumbotron text-center" style="padding: 10px!imporante;background-color: rgba(7, 0, 0, 0.1)!important">
+    <form action="" >
+        <div class="form-row div-form " style="padding: 10px!imporante;background-color: rgba(7, 0, 0, 0.2)!important; border-radius:20px" >
+            <div class="col pl-4 pr-4">
+                <label for="search" class="ml-4 " style="color: white  ;margin:3px 2px 2px; ">Localização</label>
+                <input type="text"class="search-field pesquisa-local"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2"> </div>
+                <div class="col -4">  
+                <label for="name" class="ml-4  pl-4" style="color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
+                <input type="number"  name="number" id="number" class=" search-field pesquisa-hospedes" placeholder="0-10" min="0" max="10" type="number" > 
+                </div>        
+                             
+                <div class="col pr-4" >
+                <label for="name" style="color:transparent ;10px ;margin:3px 2px 2px; ">___</label>
+                <button class="search-botao fa fa-search  pr-4 " type="submit"></button>
                 </div>
-            </form>
-</section>
-
+            </div>
+        </div>
+    </form>
+</div>
 {{!-- Filtro da Pesquisa de Hosts --}}
 <div class="corpo">
 <div class="album py-5 ">

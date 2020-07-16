@@ -287,3 +287,38 @@ h2{
     box-shadow: 0 0 5em rgba(0, 0 ,0 0.4);
 }
 
+    
+    .search-field{
+        height: 50px;
+        padding:10px;
+        border: none;
+        border-radius: 25px;
+        outline: none;
+
+    }
+    .pesquisa-local{
+        width: 300px !important;
+          font-size: 20px
+    }
+    .pesquisa-hospedes{
+     width: 10px !important;
+     margin-left: 100px;
+     padding-left: 10px;
+     font-size: 20px
+  ;
+    }
+    .search-botao{
+        height: 50px;
+        width: 90px;
+        border-radius: 25px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .div-form{
+        width:500px;
+        top:50%;
+        display: flex;
+        flex-wrap: wrap;
+        padding:3px
+    }
+    
