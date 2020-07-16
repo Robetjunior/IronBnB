@@ -4,14 +4,14 @@
             <div class="col pl-4 pr-4">
                 <label for="search" class="ml-4 " style="color: white  ;margin:3px 2px 2px; ">Localização</label>
                 <input type="text"class="search-field pesquisa-local"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2"> </div>
-                <div class="col -4">  
-                <label for="name" class="ml-4  pl-4" style="color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
-                <input type="number"  name="number" id="number" class=" search-field pesquisa-hospedes" placeholder="0-10" min="0" max="10" type="number" > 
+                <div class="col ">  
+                    <label for="name" class="ml-4  pl-4" style="color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
+                    <input type="number"  name="number" id="number" class=" search-field pesquisa-hospedes" placeholder="0-10" min="0" max="10" type="number" > 
                 </div>        
                              
                 <div class="col pr-4" >
-                <label for="name" style="color:transparent ;10px ;margin:3px 2px 2px; ">___</label>
-                <button class="search-botao fa fa-search  pr-4 " type="submit"></button>
+                    <label for="name" style="color:transparent ;10px ;margin:3px 2px 2px; ">___</label>
+                    <button class="search-botao fa fa-search  pr-4 " type="submit"></button>
                 </div>
             </div>
         </div>
@@ -26,24 +26,21 @@
                 <div class="col-md-4" >
                     <div class="card mb-4 shadow-sm" style="width:400px;	border-radius: 10%;">
                        <div class="card_new card-img-top" style="	border-radius: 10%;">
-                            <div class=" card-body imgbox" style=" width:100%	;border-radius: 10%;">
+                            <div class=" card-body imgbox" style=" margin-botom =10px    width:100%	;border-radius: 10%;">
                                     <a href="/search/{{this.id}}" type="button" >
-                                <img class="img_host" src="/images/{{this.imgPath}}" style="border-radius: 10%;" width="400px" height="450px" alt="tah"> </a>
+                                <img class="img_host" src="/images/{{this.imgPath}}" style="border-radius: 10% ;margin-bottom:10px;" width="400px" height="450px" alt="tah"> </a>
                             </div>
+                            
                             <div class="content" style="width: 400px;">
-
                                 <h3 class="ml-4">{{this.title}}</h3>
-                            <h3><small><strong>R$ {{this.preco}}</strong>/noite</small></h3>
-
+                                <h3><small><strong>R$ {{this.preco}}</strong>/noite</small></h3>
                                 <h5 class="tag mt-4">{{this.espaco}}</h5>
                                 {{#each comodidades}}
                                     <h5 class="tag mt-4" style="overflow-wrap: break-word"> {{this}}</h5></span>
                                 {{/each}}
                                 <h5 class="card-text tag mt-4">Internet</h5>
                                 <h5 class="card-text mt-2"><span class="tag">Qnt de hospedes: {{this.qntHosp}}</span></h5>
-                                <div class="d-flex justify-content-between align-items-center">
-                                       
-                                </div>
+                                
                             </div>
                         </div>
                     </div>                   
@@ -51,7 +48,5 @@
             {{/each}}
         </div>
     </div>
+</div>
 </div> 
-
-
-                                </div>
