@@ -4,16 +4,12 @@
         <div class="d-md-flex  w-100 my-md-3 pl-md-3">
             <div class="profile bg-info mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
                 <h2>Welcome, {{ userInSession.username }}!</h2>
-                <img class="bd-placeholder-img rounded-circle" width="300" height="300" src="images/profile.png">
+                <a href="/userProfile"><img class="bd-placeholder-img rounded-circle" width="300" height="300" src="images/profile.png"></a>
                     <title>Placeholder</title>
                     <react width="100%" height="100%" fill="#777"></react>
                     <text x="50%" y="50%" fill="#777" dy=".3em"></text>
                 </img>
                 <p>Email: {{userInSession.email}}</p>
-                <p>Creation date: {{userInSession.createdAt}}</p>
-                <button class="btn btn-primary">
-                    <a href="/userProfile">Reload the page</a>
-                </button>
             </div>
         </div>
 
@@ -30,9 +26,10 @@
                                         <img class="card-img-top" src="/images/{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
                                         <h3>{{this.local}}</h3>
                                     {{/each}}                   
-                                    <p class="card-text"><span class="tag">Qnt de hospedes: {{this.qntHosp}}</span></p>
+                                    <p class="card-text"><span class="tag">Qnt de hospedes: {{this.hostId.qntHosp}}</span></p>
                                     <small><strong>R$ {{this.totalValue}}</strong></small>
                                 </div>
+                                
                                 <p>Checkin: {{this.startDate}}</p>
                                 <p>Checkout: {{this.endDate}}</p>
                             </div>
