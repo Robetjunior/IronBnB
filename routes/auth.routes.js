@@ -8,6 +8,18 @@ const mongoose = require('mongoose');
 const moment = require('moment')
 const passport =require("passport")
 
+const dateFormaterYear = (s) => {
+  const newArr = s.split("-");
+  
+  let year = newArr[0];
+  let month = newArr[1];
+  let day = newArr[2];
+  
+  s = `${day}/${month}/${year}`;
+  
+  return s;
+}; 
+
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SIGNUP //////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -125,38 +137,42 @@ router.get('/userProfile', async (req, res) => {
   //   findReserv[i].endDate = moment(findReserv[i].endDate).format('DD/MM/YYYY');
   //   console.log(moment(findReserv[i].startDate).format('DD/MM/YYYY'))
   // }
-
-
-  console.log(findReserv)
-  /////////////////////////
-
+  
+  
   res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: findReserv});
   // res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 
-router.get("/auth/facebook",
-  passport.authenticate("facebook",
-    {
-      data: [
-        {
-          "permission": "public_profile",
-          "status": "granted"
-        }
-      ]
-    }));
+// router.get("/auth/facebook",
+//   passport.authenticate("facebook",
+//     {
+//       data: [
+//         {
+//           "permission": "public_profile",
+//           "status": "granted"
+//         }
+//       ]
+//     }));
 
-  // one way back from facebook
-router.get("/auth/facebook/callback",
-  passport.authenticate("facebook", {
-    successRedirect: "/test",
-    failureRedirect: "/login"
-  }),
-);
+//   // one way back from facebook
+// router.get("/auth/facebook/callback",
+//   passport.authenticate("facebook", {
+//     successRedirect: "/test",
+//     failureRedirect: "/login"
+//   }),
+// );  // one way back from facebook
+// router.get("/auth/facebook/callback",
+//   passport.authenticate("facebook", {
+//     successRedirect: "/test",
+//     failureRedirect: "/login"
+//   }),
+// );
 
 
-router.get("/test", (req, res) => {
-  console.log("testtttt")
-  res.redirect("/places")
-})
+// router.get("/test", (req, res) => {
+//   console.log("testtttt")
+//   res.redirect("/places")
+// })
+// })
 
 module.exports = router;
