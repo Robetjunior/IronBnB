@@ -48,9 +48,9 @@ router.post('/search/:hostId/reserva', async (req, res) => {
             startDate: startDate,
             endDate: endDate,
             guestId: req.session.currentUser._id,
-            hostId: result._id,
-            value: result.preco,
-            totalValue: result.preco * diffDays
+            hostId: result.id,
+            value: result.preco[0],
+            totalValue: result.preco[0] * diffDays
         });
 
         res.render('guest/confirm-host', {reserva: newReserva, userInSession: req.session.currentUser})
