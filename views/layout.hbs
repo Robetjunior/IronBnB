@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
- 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/attention.css">
 <link rel="stylesheet" href="/stylesheets/sign.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
       <link rel="stylesheet" href="/stylesheets/mutateStyle.css">  
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -21,8 +23,8 @@
 </head>
 
 <body>
-
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark " style="z-index: 3!important; height: 70px;">
+  <header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark "  style=" z-index: 3!important; height: 100px;">
     <span class="w-100 d-lg-none d-block"></span>
     <a href="/"><img src="/images/icon1.png" width="150px" alt="Ironbnb Icon"></a>  
     <form class="form-inline" action="/search" method="GET">
@@ -30,21 +32,14 @@
       <div class="navbar text-right" id="myNavbar7">
         <ul class="navbar-nav ">    
           {{#if userInSession}}
-<<<<<<< HEAD
 
-            <li class="nav-item"><a href="/">Home</a>
-            </li>
-
-            <li class="nav-item pl-4 pr-4"> <a href="/userProfile">Perfil</a> 
-            </li>
-=======
           
           
             <li class="nav-item"><a href="/">Home</a> <span>   </span></li>
-            <li class="nav-item pl-4 pr-4"> <a href="/userProfile">Perfil</a></li>
+            <li class="nav-item pl-4 pr-4 glyphicon glyphicon-user"> <a href="/userProfile">Perfil</a></li>
 
-            <li class="nav-item pr-4"> <a href="/host">Your Host</a> <span>  </span></li>
->>>>>>> 64d2ad092e51caa924bd27451ccd6e18c92aef3b
+            <li class="nav-item pr- " > <a href="/host">Your Host</a> <span>  </span></li>
+
 
             <li class="nav-item">
               <form id="logout-form" action="/logout" method="POST">
@@ -59,16 +54,14 @@
         </ul>
       </div>
     </nav>
-   
+   </header>
     
        
-       </div>
-  
-    </div>
+       
 
      {{{body}}}
-    <footer class="footer " style="z-index: 2;position: relative!important;">
-        Developed by José and Eduardo
+    <footer class="footer " style=" width: 100%; height: 10%;z-index: 2;position: relative!important;">
+      <h2 width="10%" > Developed by José and Eduardo</h2> 
     </footer>
     
   </body>
