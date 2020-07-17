@@ -11,7 +11,7 @@ cloudinary.config({
 const storage = cloudinaryStorage({
   // cloudinary: cloudinary,
   cloudinary: cloudinary,
-  folder: "movies", // The name of the folder in cloudinary
+  folder: "host", // The name of the folder in cloudinary
   allowedFormats: ["jpg", "png"],
   // params: { resource_type: 'raw' }, => this is in case you want to upload other type of files, not just images
   filename: function (req, file, cb) {

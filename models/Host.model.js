@@ -8,6 +8,10 @@ const hostSchema = new Schema(
             required: [true, 'Local is required'],
             trim: true,
         },
+        ownerId: {
+            type: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+            trim: true
+        },
         title:{
             type: String,
             trim: true,

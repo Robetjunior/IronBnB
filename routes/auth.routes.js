@@ -11,6 +11,9 @@ const passport =require("passport")
 // Instancia do Multer/Cloudnary
 const fileUploader = require('../configs/cloudnary.config');
 
+
+const HostModel = require('../models/Host.model');
+
 //funcao formatar data
 const dateFormaterYear = (s) => {
   const newArr = s.toString().split(" ");
@@ -143,5 +146,40 @@ router.get('/userProfile', async (req, res) => {
   // })
   res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: findReserv});
 });
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////GERENCIANDO HOSTS///////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+router.get('/host', async (req, res) => {
+  //verificar se  tem host criado pelo o usuario logado e apresentar na tela 
+  const hosts = await HostModel.find({"ownerId": req.session.currentUser._id});
+  console.log(hosts)
+  res.render('hoster/managment-host', {userInSession: req.session.currentUser, hosts})
+});
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////CRIANDO HOSTS///////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+router.get('/host/create', async(req, res) => res.render('hoster/new-host', {userInSession: req.session.currentUser}))
+
+
+router.post('/host/create', fileUploader.single("imgPath"), (req,res) => {
+    const { local, title, espaco, qntHosp, preco } = req.body;
+
+
+    HostModel.create({local, title, espaco, qntHosp, preco, imgPath: req.file.url, ownerId: req.session.currentUser._id})
+      .then((data)=>{
+        console.log(data);
+        res.redirect('/host');
+      })
+      .catch((err)=>
+        console.error(`Error while creating a new host: ${err}`)
+    );
+});
+//req.session.currentUser
+
 
 module.exports = router;
