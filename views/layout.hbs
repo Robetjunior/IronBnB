@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
-    {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./javascripts/signup.js"></script> --}}
-<link rel="stylesheet" href="stylesheets/sign.css">
+ 
+<link rel="stylesheet" href="/stylesheets/sign.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -19,55 +18,52 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
       <link rel="stylesheet" href="/stylesheets/style.css">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark " style="height: 70px;">
-      
-        <span class="w-100 d-lg-none d-block"></span>
-        <a href="/"><img src="/images/icon1.png" width="150px" alt="Ironbnb Icon"></a>  
-      <form class="form-inline" action="/search" method="GET">
-    
-     
-  </form>
-
-      <div class="collapse navbar-collapse flex-grow-3s text-right" id="myNavbar7">
-        
-        <ul class="navbar-nav ml-auto flex-nowrap">    
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark " style="z-index: 3!important; height: 70px;">
+    <span class="w-100 d-lg-none d-block"></span>
+    <a href="/"><img src="/images/icon1.png" width="150px" alt="Ironbnb Icon"></a>  
+    <form class="form-inline" action="/search" method="GET">
+    </form>
+      <div class="navbar text-right" id="myNavbar7">
+        <ul class="navbar-nav ">    
           {{#if userInSession}}
+      
+            <li class="nav-item"><a href="/">Home</a> <span>   </span></li>
+            <li class="nav-item pl-4 pr-4"> <a href="/userProfile">Perfil</a></li>
+
+            <li class="nav-item pr-4"> <a href="/host">Your Host</a> <span>  </span></li>
+
+
             <li class="nav-item">
               <form id="logout-form" action="/logout" method="POST">
                 <button>Logout</button>
               </form>
             </li>
             {{else}}
-            <li class="nav-item">
-              <a href="/signup">Signup</a> <span> </span>
-            </li>
             <li class="nav-item ml-3 mr-3">
-              <a href="/login">Login</a> <span>  </span>
+              <a href="/login">Login / Signup</a> <span>  </span>
             </li>
           {{/if}}
         </ul>
       </div>
     </nav>
-    <article>
-    <div id="#page-container">
-      
-        <div id="content-wrap">
-        {{{body}}}
+   
+    
+       
        </div>
   
     </div>
-    </article>
-    <footer class="footer " style="position: fixed;">
+
+     {{{body}}}
+    <footer class="footer " style="z-index: 2;position: relative!important;">
         Developed by José and Eduardo
     </footer>
     
   </body>
-  <script src="/javascripts/signup.js"></script>
-  {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/br.min.js"></script> --}}
+    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/br.min.js"></script> --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="/javascripts/script.js"></script>

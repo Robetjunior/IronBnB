@@ -6,16 +6,35 @@ const User = require('../models/User.model');
 const Reserva = require('../models/Reserva.model')
 const mongoose = require('mongoose');
 const moment = require('moment')
+const passport =require("passport")
+
+// Instancia do Multer/Cloudnary
+const fileUploader = require('../configs/cloudnary.config');
+
+
+const HostModel = require('../models/Host.model');
+
+//funcao formatar data
+const dateFormaterYear = (s) => {
+  const newArr = s.toString().split(" ");
+
+  let year = newArr[3];
+  let day = newArr[2];
+  let month = newArr[1];
+  
+  return `${day}/${month}/${year}`;
+}; 
+
 
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////// SIGNUP //////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
 // .get() route ==> to display the signup form to users
-router.get('/signup', (req, res) => res.render('auth/signup', {userInSession: req.session.currentUser}));
+router.get('/login/create ', (req, res) => res.render('auth/login', {userInSession: req.session.currentUser}));
 
 // .post() route ==> to process form data
-router.post('/signup', (req, res, next) => {
+router.post('/login/create', (req, res, next) => {
   const { username, email, password } = req.body;
 
   if (!username || !email || !password) {
@@ -26,7 +45,7 @@ router.post('/signup', (req, res, next) => {
   // make sure passwords are strong:
   const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
   if (!regex.test(password)) {
-    res
+    resdateFormaterYear
       .status(500)
       .render('auth/signup', { errorMessage: 'Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter.', userInSession: req.session.currentUser });
     return;
@@ -45,13 +64,13 @@ router.post('/signup', (req, res, next) => {
     })
     .then(userFromDB => {
       console.log('Newly created user is: ', userFromDB);
-      res.redirect('/userProfile');
+      res.redirect('/login');
     })
     .catch(error => {
       if (error instanceof mongoose.Error.ValidationError) {
-        res.status(500).render('auth/signup', { errorMessage: error.message, userInSession: req.session.currentUser });
+        res.status(500).render('auth/login', { errorMessage: error.message, userInSession: req.session.currentUser });
       } else if (error.code === 11000) {
-        res.status(500).render('auth/signup', {
+        res.status(500).render('auth/login', {
           errorMessage: 'Username and email need to be unique. Either username or email is already used.', userInSession: req.session.currentUser
         });
       } else {
@@ -69,7 +88,6 @@ router.get('/login', (req, res) => res.render('auth/login', {userInSession: req.
 
 // .post() login route ==> to process form data
 router.post('/login', (req, res, next) => {
-  // console.log('SESSION =====> ', req.session);
   const { email, password } = req.body;
 
   if (email === '' || password === '') {
@@ -102,37 +120,71 @@ router.post('/login', (req, res, next) => {
     .catch(error => next(error));
 });
 
+
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////// LOGOUT ////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-
 router.post('/logout', (req, res) => {
   req.session.destroy();
   res.redirect('/');
 });
-// router.get('/userProfile', (req, res) => res.render('users/user-profile'));
 
-// Protegendo rota privada
+////////////////////////////////////////////////////////////////////////
+////////////////////PROTEGENDO ROTA PRIVADA/////////////////////////////
+////////////////////////////////////////////////////////////////////////
 router.get('/userProfile', async (req, res) => {
   console.log('your sess exp: ', req.session.cookie.expires);
 
   //VERIFICAR ESSA PARTE
   const findReserv = await Reserva.find().populate("hostId").exec();
+  const newArr = []
 
-  // for(let i=0; i<=findReserv.length; i+=1){
-  //   findReserv[i].startDate = moment(findReserv[i].startDate).format('DD/MM/YYYY');
-  //   findReserv[i].endDate = moment(findReserv[i].endDate).format('DD/MM/YYYY');
-  //   console.log(moment(findReserv[i].startDate).format('DD/MM/YYYY'))
-  // }
+  for(let item of findReserv){
+    const formatedStartDate = moment(item.startDate).format('DD/MM/YYYY')
+    const formatedEndDate = moment(item.endDate).format('DD/MM/YYYY')
+    newArr.push({...item._doc, startDate: formatedStartDate, endDate: formatedEndDate})
+  }
 
+  const result = findReserv.map(item => item.hostId)
 
-  console.log(findReserv)
-  /////////////////////////
+  console.log(result)
 
-  res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: findReserv});
-  // res.render('users/user-profile', { userInSession: req.session.currentUser });
+  res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: newArr});
 });
 
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////GERENCIANDO HOSTS///////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+router.get('/host', async (req, res) => {
+  //verificar se  tem host criado pelo o usuario logado e apresentar na tela 
+  const hosts = await HostModel.find({"ownerId": req.session.currentUser._id});
+  console.log(hosts)
+  res.render('hoster/managment-host', {userInSession: req.session.currentUser, hosts})
+});
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////CRIANDO HOSTS///////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+router.get('/host/create', async(req, res) => res.render('hoster/new-host', {userInSession: req.session.currentUser}))
+
+
+router.post('/host/create', fileUploader.single("imgPath"), (req,res) => {
+    const { local, title, espaco, qntHosp, preco } = req.body;
+
+
+    HostModel.create({local, title, espaco, qntHosp, preco, imgPath: req.file.url, ownerId: req.session.currentUser._id})
+      .then((data)=>{
+        console.log(data);
+        res.redirect('/host');
+      })
+      .catch((err)=>
+        console.error(`Error while creating a new host: ${err}`)
+    );
+});
+//req.session.currentUser
 
 
 module.exports = router;

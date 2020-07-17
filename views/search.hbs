@@ -1,46 +1,51 @@
-<section class="jumbotron text-center">
-     <form class="inner cover " action="/search" method="GET">
-                <div class="form-inline justify-content-center" style="background-color: rgba(7, 0, 0, 0.4); border-radius: 10px">
-                    <div class="col-md-4 mr-4  justify-content-center" >
-                     <label for="validationCustom01"  class="" style="color:white ;font-size:10px ;margin:3px 2px 2px; ">Localização</label>
-                    <input name="search" type="text" class="form-control "  id="search" style="bottom:2px"! placeholder="Para onde você quer ir?" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    </div>
-                    <div class="col-md-4 ml-4" style="left:10%">
-                        <label for="validationCustom01" style="color:white ;font-size:10px ;margin:3px 2px 2px; ">Hóspedes</label>
-                    <input name="number" type="number" id="number" class=" form-control" in="0" max="10" type="number" style="width:25px" id="local" placeholder="0">
-                    </div>
-                    <div class="input-group-append">
-                        <button class="btn_white btn btn-outline-primary fa fa-search mt-3"  type="submit"></button>
-                    </div>
+<div class="jumbotron text-center w-100 h-25" style="vertical-align: middle; z-index: 3!important;width:auto; padding: px!important;background-color: rgba(255, 255, 255, 0)!important">
+  
+    <form class="w-75 " style=";z-index: 6!important;"action="/search" method="GET">
+            {{!-- <h1 style="z-index: 6!important;">Ironbnb</h1> --}}
+        <div class="form-row div-form w-100" style="padding: 40px!important;background-color: rgba(7, 0, 0, 0.4
+        )!important; border-radius:20px" >
+            
+            <div class="pr-4 w-50">
+                <label for="search" class="ml-4 w-100" style="font-size: 20px;color: white  ;margin:3px 2px 2px; ">Localização</label>
+                <input type="text"class="ml-4 pr-4 search-field pesquisa-local w-100"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2"> </div>
+                <div class=" w-25   ">  
+                    <label for="name" class="ml-4  w-100" style="font-size: 20px ;color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
+                    <input   type="number"  name="number" id="number" class=" search-field pesquisa-hospedes w-100" placeholder="0-10" min="0" max="10" type="number" > 
+                </div>        
+                             
+                <div class=" w-25" >
+                    <label for="name" style=" font-size: 20px; color:transparent ;10px ;margin:3px 2px 2px; ">___</label>
+                    <button class="search-botao fa-3x fa fa-search  pr-4 w-100" type="submit"></button>
                 </div>
-            </form>
-</section>
-
+            </div>
+        </div>
+    </form>
+    
+</div>
 {{!-- Filtro da Pesquisa de Hosts --}}
-<div class="corpo">
-<div class="album py-5 ">
-    <div class="container " >
-        <div class="row">
+<div class="corpo" >
+<div class="album" > 
+    <div class="card-deck "  >
+        <div class="row " >
             {{#each host}}
                 <div class="col-md-4" >
-                    <div class="card mb-4 shadow-sm" style="	border-radius: 10%;">
+                    <div class="card mb-4 shadow-sm" style="width:400px;	border-radius: 10%;">
                        <div class="card_new card-img-top" style="	border-radius: 10%;">
-                            <div class=" card-body imgbox" style="	border-radius: 10%;">
-                                <img class="img_host" src="/images/hostExemple.jpg" style="	border-radius: 10%;" width="350px" height="450px" alt="tah">
+                            <div class=" card-body imgbox" style=" margin-bottom =10px    width:100%	;border-radius: 10%;">
+                                    <a href="/search/{{this.id}}" type="button" >
+                                <img class="img_host" src="{{this.imgPath}}" style="border-radius: 10% ;margin-bottom:10px;" width="400px" height="450px" alt="tah"> </a>
                             </div>
-                            <div class="content">
-                                <h3 class="ml-4">{{this.local}}</h3>
-                                <h5 class="description">{{this.descricao}} </h5>
-                                <h5 class="tag mt-4">{{this.espaco}}</h5>
-                                <h5 class="tag mt-4" style="overflow-wrap: break-word"> Praia</h5></span>
-                                <h5 class="card-text tag mt-4">Internet</h5>
-                                <h5 class="card-text mt-2"><span class="tag">Qnt de hospedes: {{this.qntHosp}}</span></h5>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="/search/{{this.id}}" type="button" class="btn btn-sm btn-primary tag p-2">
-                                        View
-                                    </a>    <h3>
-                                    <small><strong>R$ {{this.preco}}</strong>/noite</small></h3>
-                                </div>
+                            
+                            <div class="content" style="width: 400px;">
+                                <h3 class="ml-4">{{this.title}}</h3>
+                                <h3><small><strong>R$ {{this.preco}}</strong>/noite</small></h3>
+                                <h5 class="tag mt-4 mb-4">{{this.espaco}}</h5>
+                                {{#each comodidades}}
+                                    <h5 class="tag mt-4 mb-4" style="overflow-wrap: break-word"> {{this}}</h5></span>
+                                {{/each}}
+                                <h5 class=" tag mb-4 mt-4">Internet</h5>
+                                <span ><h4 class="tag  mt-4 mb-4">Qnt de hospedes: {{this.qntHosp}} </h4></span>
+                                
                             </div>
                         </div>
                     </div>                   
@@ -48,7 +53,5 @@
             {{/each}}
         </div>
     </div>
+</div>
 </div> 
-
-
-                                </div>

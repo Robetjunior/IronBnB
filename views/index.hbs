@@ -1,24 +1,86 @@
-<div class=" text-center">
-    <div class="cover-container flex-column mx-auto">
-        <img class="imgbg" src="./images/backgroundHomePage.png" width="100%" height="auto" alt="Background Homepage">
-        <div class="form-center justify-content-center">
-            <h1><img class="mt-4" src="/images/icon1.png" alt="Ironbnb Icon" width="150px"></h1> 
-            <form class="inner cover " action="/search" method="GET">
-                <div class="form-inline form-label-group justify-content-center" style="background-color: rgba(7, 0, 0, 0.4); border-radius: 10px">
-                    <div class="col-md-4 mr-4  justify-content-center" >
-                     <label for="search"  class="" style="color:white ;font-size:10px ;margin:3px 2px 2px; ">Localização</label>
-                    <input name="search" type="text" class="form-control "  id="search" style="bottom:2px"! placeholder="Para onde você quer ir?" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    </div>
-                    <div class="col-md-4 ml-4" style="left:10%">
-                        <label for="name" style="color:white ;font-size:10px ;margin:3px 2px 2px; ">Hóspedes</label>
-                    <input name="number" type="number" id="number" class=" form-control search" in="0" max="10" type="number" style="width:25px" id="local" placeholder="0">
-                    </div>
-                    <div class="input-group-append">
-                        <button class="btn_white btn btn-outline-primary fa fa-search mt-3"  type="submit"></button>
-                    </div>
+<style>
+.cabeca{
+        color: white;
+        width: 100%;
+        height: 92vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(51, 20, 2, 0.5);
+z-index: 2;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        font-family: sans-serif;
+    }
+    @media only screen and (max-width: 1200px) and (min-width: 750px) {
+     .cabeca{   
+     display: flex;
+        color: white;
+        background-image:  linear-gradient(
+        115deg,
+        rgba(204, 85, 16, 0.5),
+        #be1cbe80),
+        url(./images/chaleRubi.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        }
+        }
+        @media only screen and (max-width: 749px) and (min-width: 400px) {
+    .cabeca{
+        color: white;
+        background-image:linear-gradient(
+        115deg,
+        rgba(204, 85, 16, 0.5),
+        rgba(190, 28, 190, 0.5)),
+        url(./images/chaleAlpes.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+        }
+     
+</style>
+
+
+    <div class="crossfade"  >
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+    </div>
+ <div class="cabeca " >
+
+
+<div class="jumbotron text-center w-100 h-25" style="vertical-align: middle; z-index: 3!important;width:auto; padding: px!important;background-color: rgba(255, 255, 255, 0)!important">
+  
+    <form class="w-75 " style=";z-index: 6!important;"action="/search" method="GET">
+            {{!-- <h1 style="z-index: 6!important;">Ironbnb</h1> --}}
+        <div class="form-row div-form w-100" style="padding: 40px!important;background-color: rgba(7, 0, 0, 0.1
+        )!important; border-radius:20px" >
+            
+            <div class="pr-4 w-50">
+                <label for="search" class="ml-4 w-100" style="font-size: 20px;color: white  ;margin:3px 2px 2px; ">Localização</label>
+                <input type="text"class="ml-4 pr-4 search-field pesquisa-local w-100"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2"> </div>
+                <div class=" w-25   ">  
+                    <label for="name" class="ml-4  w-100" style="font-size: 20px ;color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
+                    <input   type="number"  name="number" id="number" class=" search-field pesquisa-hospedes w-100" placeholder="0-10" min="0" max="10" type="number" > 
+                </div>        
+                             
+                <div class=" w-25" >
+                    <label for="name" style=" font-size: 20px; color:transparent ;10px ;margin:3px 2px 2px; ">___</label>
+                    <button class="search-botao fa-3x fa fa-search  pr-4 w-100" type="submit"></button>
                 </div>
-            </form>
-        </div>  
+            </div>
+        </div>
+    </form>
+    
 </div>
 
-</div>
+  
+    

@@ -48,9 +48,9 @@ router.post('/search/:hostId/reserva', async (req, res) => {
             startDate: startDate,
             endDate: endDate,
             guestId: req.session.currentUser._id,
-            hostId: result._id,
-            value: result.preco,
-            totalValue: result.preco * diffDays
+            hostId: result.id,
+            value: result.preco[0],
+            totalValue: result.preco[0] * diffDays
         });
 
         res.render('guest/confirm-host', {reserva: newReserva, userInSession: req.session.currentUser})
@@ -69,25 +69,14 @@ router.post('/search/:hostId/reserva/confirm', async(req, res)=>{
         if(!req.session.currentUser){
             res.redirect('/login')
         }
-        console.log(req.params)
-
+        
         const result1 = await Host.updateOne({"_id": req.params.hostId}, {$set: {"reservado": true}})
 
-        console.log(result1)
-        
         res.redirect('/userProfile');
 
     }catch(err){
         throw new Error(err)
     }
 })
-
-//criar um model reserva 
-//com data inicio e fim
-//preco atualizado 
-//disponibildade = boolean
-
-
-
 
 module.exports = router;
