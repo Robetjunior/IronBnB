@@ -2,15 +2,16 @@
 .cabeca{
         color: white;
         width: 100%;
-        height: 95vh;
+        height: 92vh;
         background-repeat: no-repeat;
         background-size: cover;
         background-color: rgba(51, 20, 2, 0.5);
 z-index: 2;
         background-position: center;
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        
         font-family: sans-serif;
     }
     @media only screen and (max-width: 1200px) and (min-width: 750px) {
@@ -42,77 +43,44 @@ z-index: 2;
         background-attachment: fixed;
     }
         }
-    .search-field{
-        height: 50px;
-        padding:10px;
-        border: none;
-        border-radius: 25px;
-        outline: none;
-
-    }
-    .pesquisa-local{
-        width: 300px !important;
-          font-size: 20px
-    }
-    .pesquisa-hospedes{
-     width: 10px !important;
-     margin-left: 100px;
-     padding-left: 10px;
-     font-size: 20px
-  ;
-    }
-    .search-botao{
-        height: 50px;
-        width: 90px;
-        border-radius: 25px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-    .div-form{
-        width:500px;
-        top:50%;
-        display: flex;
-        flex-wrap: wrap;
-        padding:3px
-    }
-    
+     
 </style>
- <div class="cabeca" >
 
 
-    
-<form class="inner cover " action="/search" method="GET">
-<div style="">
-   
-        <div > 
-        <h1 style="z-index: 3!important"></h1></div>
-            <div class="form-row div-form  ">
-                
-                <div class="col pl-4"style="z-index: 3!important; " > 
-                    <label for="search" class="ml-4 "  style=" color: white  ;margin:3px 2px 2px; ">Localização</label>
-                    <input type="text"class="search-field pesquisa-local"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2"> 
-                </div>
-                    
-                <div class="col" style="z-index: 3!important; ">  
-                    <label for="name" class="ml-4 pl-4g" style="color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
-                    <input type="number"  name="number" id="number" class="pr-4 search-field pesquisa-hospedes" placeholder="0-10" min="0" max="10" type="number" > 
-                </div> 
-                                    
-                <div class="col" style="z-index: 3!important; " >
-                    <label for="name" style="color:transparent ;10px ;margin:3px 2px 2px; ">___</label>
-                    <button class="search-botao    fa fa-search   "  type="submit"></button>
-                </div>
-                </div>
-         </form>
+    <div class="crossfade"  >
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
+      <figure></figure>
     </div>
-</div>
-            </form>
+ <div class="cabeca " >
+
+
+<div class="jumbotron text-center w-100 h-25" style="vertical-align: middle; z-index: 3!important;width:auto; padding: px!important;background-color: rgba(255, 255, 255, 0)!important">
   
+    <form class="w-75 " style=";z-index: 6!important;"action="/search" method="GET">
+            {{!-- <h1 style="z-index: 6!important;">Ironbnb</h1> --}}
+        <div class="form-row div-form w-100" style="padding: 40px!important;background-color: rgba(7, 0, 0, 0.1
+        )!important; border-radius:20px" >
+            
+            <div class="pr-4 w-50">
+                <label for="search" class="ml-4 w-100" style="font-size: 20px;color: white  ;margin:3px 2px 2px; ">Localização</label>
+                <input type="text"class="ml-4 pr-4 search-field pesquisa-local w-100"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2"> </div>
+                <div class=" w-25   ">  
+                    <label for="name" class="ml-4  w-100" style="font-size: 20px ;color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
+                    <input   type="number"  name="number" id="number" class=" search-field pesquisa-hospedes w-100" placeholder="0-10" min="0" max="10" type="number" > 
+                </div>        
+                             
+                <div class=" w-25" >
+                    <label for="name" style=" font-size: 20px; color:transparent ;10px ;margin:3px 2px 2px; ">___</label>
+                    <button class="search-botao fa-3x fa fa-search  pr-4 w-100" type="submit"></button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</div>
 
-    <div class="crossfade" >
-      <figure></figure>
-      <figure></figure>
-      <figure></figure>
-      <figure></figure>
-      <figure></figure>
-    </div>
+  
+    

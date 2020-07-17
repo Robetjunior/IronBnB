@@ -224,7 +224,7 @@ footer {
     color: #fff;
     font-size: 14px;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     text-align: center;

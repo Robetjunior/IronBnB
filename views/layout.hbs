@@ -18,29 +18,33 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
       <link rel="stylesheet" href="/stylesheets/style.css">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark " style="z-index: 3!important; height: 70px;">
-      
-        <span class="w-100 d-lg-none d-block"></span>
-        <a href="/"><img src="/images/icon1.png" width="150px" alt="Ironbnb Icon"></a>  
-      <form class="form-inline" action="/search" method="GET">
-    
-     
-  </form>
-
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark " style="z-index: 3!important; height: 70px;">
+    <span class="w-100 d-lg-none d-block"></span>
+    <a href="/"><img src="/images/icon1.png" width="150px" alt="Ironbnb Icon"></a>  
+    <form class="form-inline" action="/search" method="GET">
+    </form>
       <div class="navbar text-right" id="myNavbar7">
-        
         <ul class="navbar-nav ">    
           {{#if userInSession}}
+<<<<<<< HEAD
+
+            <li class="nav-item"><a href="/">Home</a>
+            </li>
+
+            <li class="nav-item pl-4 pr-4"> <a href="/userProfile">Perfil</a> 
+            </li>
+=======
           
           
             <li class="nav-item"><a href="/">Home</a> <span>   </span></li>
             <li class="nav-item pl-4 pr-4"> <a href="/userProfile">Perfil</a></li>
 
             <li class="nav-item pr-4"> <a href="/host">Your Host</a> <span>  </span></li>
+>>>>>>> 64d2ad092e51caa924bd27451ccd6e18c92aef3b
 
             <li class="nav-item">
               <form id="logout-form" action="/logout" method="POST">
@@ -55,13 +59,14 @@
         </ul>
       </div>
     </nav>
-    <article>
+   
     
-        {{{body}}}
+       
        </div>
   
     </div>
-    </article>
+
+     {{{body}}}
     <footer class="footer " style="z-index: 2;position: relative!important;">
         Developed by José and Eduardo
     </footer>
