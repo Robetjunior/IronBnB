@@ -160,7 +160,6 @@ router.get('/userProfile', async (req, res) => {
 router.get('/host', async (req, res) => {
   //verificar se  tem host criado pelo o usuario logado e apresentar na tela
   const findHost = await HostModel.find({"ownerId":req.session.currentUser._id}); 
-  console.log(findHost)
   res.render('hoster/managment-host', {userInSession: req.session.currentUser, findHost})
 });
 
