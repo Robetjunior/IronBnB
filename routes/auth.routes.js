@@ -145,6 +145,10 @@ router.get('/userProfile', async (req, res) => {
     newArr.push({...item._doc, startDate: formatedStartDate, endDate: formatedEndDate})
   }
 
+  const result = findReserv.map(item => item.hostId)
+
+  console.log(result)
+
   res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: newArr});
 });
 
