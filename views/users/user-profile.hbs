@@ -9,7 +9,7 @@
                     <react width="100%" height="100%" fill="#777"></react>
                     <text x="50%" y="50%" fill="#777" dy=".3em"></text>
                 </img>
-                <p>Email: {{userInSession.email}}</p>
+                <h4><strong>Email: {{userInSession.email}}</strong> </h4>
             </div>
         </div>
 
@@ -48,8 +48,8 @@
                         </div> 
                             {{/each}}
                             {{else}}
-                            <main role="main" class="inner cover text-center">
-                                <h1 class="cover-heading">NAO TEM RESERVAS AGENDAS</h1>
+                            <main role="main" class="inner cover text-center" style="width:1200px;">
+                                <h1 class="title cover-heading">NAO TEM RESERVAS AGENDAS</h1>
                             </main>
                             {{/if}}
                 </div>
