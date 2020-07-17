@@ -20,21 +20,25 @@
             <div class="row">
                 {{#each reservas}}
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    {{#each this.hostId}}
+                        <div class="card mb-4 shadow-sm" style="width: 200px;">
+                               
+                            <div class="card-body">
+                                        {{#with hostId}}
                                         <img class="card-img-top" src="{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
                                         <h3>{{this.local}}</h3>
-                                    {{/each}}                   
-                                    <p class="card-text"><span class="tag">Qnt de hospedes: {{this.hostId.qntHosp}}</span></p>
-                                    <small><strong>R$ {{this.totalValue}}</strong></small>
-                                </div>
+                                        {{/with}}
+                                        <p class="card-text"><span class="tag">Qnt de hospedes: {{this.hostId.qntHosp}}</span></p>
+                                        <small><strong>R$ {{this.totalValue}}</strong></small>
+                                    </div>
                                 
                                 <p>Checkin: {{this.startDate}}</p>
                                 <p>Checkout: {{this.endDate}}</p>
+                                    
+                                 
                             </div>
+                            
                         </div>
-               
+                        
                     {{/each}}
                 </div>
             </div>

@@ -137,14 +137,15 @@ router.get('/userProfile', async (req, res) => {
 
   //VERIFICAR ESSA PARTE
   const findReserv = await Reserva.find().populate("hostId").exec();
-  // const startDateFormated = findReserv.map(reserva=> {
-  //   return reserva.startDate = dateFormaterYear(reserva.startDate);   
-  // })
+  const newArr = []
 
-  // const endDateFormated = findReserv.map(reserva=> {
-  //   return reserva.endDate = dateFormaterYear(reserva.endDate);   
-  // })
-  res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: findReserv});
+  for(let item of findReserv){
+    const formatedStartDate = moment(item.startDate).format('DD/MM/YYYY')
+    const formatedEndDate = moment(item.endDate).format('DD/MM/YYYY')
+    newArr.push({...item._doc, startDate: formatedStartDate, endDate: formatedEndDate})
+  }
+
+  res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: newArr});
 });
 
 
