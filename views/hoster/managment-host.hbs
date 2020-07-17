@@ -2,11 +2,14 @@
 <a class="btn btn-success" href="/host/create">Create your host <div class="ripple-container"></div></a>
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
     <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        {{#if findHost}}
         <div class="my-3 py-3">
             <h2 class="display-5">Reservados!</h2>
             <p class="lead"> TesteTesteTesteTesteTeste</p>
         </div>
-        
+        {{else}}
+        <h1>NAO TEM HOST </h1>
+        {{/if}}
     </div>
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
 
