@@ -27,7 +27,7 @@ const hostSchema = new Schema(
             required: true,        
         },
         qntHosp:{
-            type: [Number, 'QntHosp is required'],
+            type: Number,
             required: true
         },
         preco:{

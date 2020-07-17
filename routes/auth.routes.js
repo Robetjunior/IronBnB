@@ -137,14 +137,19 @@ router.get('/userProfile', async (req, res) => {
 
   //VERIFICAR ESSA PARTE
   const findReserv = await Reserva.find().populate("hostId").exec();
-  // const startDateFormated = findReserv.map(reserva=> {
-  //   return reserva.startDate = dateFormaterYear(reserva.startDate);   
-  // })
+  const newArr = []
 
-  // const endDateFormated = findReserv.map(reserva=> {
-  //   return reserva.endDate = dateFormaterYear(reserva.endDate);   
-  // })
-  res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: findReserv});
+  for(let item of findReserv){
+    const formatedStartDate = moment(item.startDate).format('DD/MM/YYYY')
+    const formatedEndDate = moment(item.endDate).format('DD/MM/YYYY')
+    newArr.push({...item._doc, startDate: formatedStartDate, endDate: formatedEndDate})
+  }
+
+  const result = findReserv.map(item => item.hostId)
+
+  console.log(result)
+
+  res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: newArr});
 });
 
 
@@ -153,10 +158,9 @@ router.get('/userProfile', async (req, res) => {
 ////////////////////GERENCIANDO HOSTS///////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 router.get('/host', async (req, res) => {
-  //verificar se  tem host criado pelo o usuario logado e apresentar na tela 
-  const hosts = await HostModel.find({"ownerId": req.session.currentUser._id});
-  console.log(hosts)
-  res.render('hoster/managment-host', {userInSession: req.session.currentUser, hosts})
+  //verificar se  tem host criado pelo o usuario logado e apresentar na tela
+  const findHost = await HostModel.find({"ownerId":req.session.currentUser._id}); 
+  res.render('hoster/managment-host', {userInSession: req.session.currentUser, findHost})
 });
 
 

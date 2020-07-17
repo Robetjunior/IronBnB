@@ -1,7 +1,7 @@
 {{#if userInSession}}
 <div class="container">
     <div class="row">
-        <div class="d-md-flex  w-100 my-md-3 pl-md-3">
+        <div class="w-100 my-md-3 pl-md-3">
             <div class="profile bg-info mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
                 <h2>Welcome, {{ userInSession.username }}!</h2>
                 <a href="/userProfile"><img class="bd-placeholder-img rounded-circle" width="300" height="300" src="images/profile.png"></a>
@@ -9,36 +9,56 @@
                     <react width="100%" height="100%" fill="#777"></react>
                     <text x="50%" y="50%" fill="#777" dy=".3em"></text>
                 </img>
-                <p>Email: {{userInSession.email}}</p>
+                <h4><strong>Email: {{userInSession.email}}</strong> </h4>
             </div>
         </div>
 
 
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-        <h1>Reservas</h1>
-            <div class="row">
-                {{#each reservas}}
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                                <div class="card-body">
-                                    {{#each this.hostId}}
-                                        <img class="card-img-top" src="{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
-                                        <h3>{{this.local}}</h3>
-                                    {{/each}}                   
-                                    <p class="card-text"><span class="tag">Qnt de hospedes: {{this.hostId.qntHosp}}</span></p>
-                                    <small><strong>R$ {{this.totalValue}}</strong></small>
+        <div class="section">
+                <div class="container">
+                    {{#if reservas}}
+                    <div id="nav-tabs"> 
+                        <h3><strong>Reservas</strong></h3>
+                        <div class="row">
+                            
+                            {{#each reservas}}
+                            <div class="col-md-6">
+                                {{#with hostId}}
+                                <div class="card card-nav-tabs">
+
+                                    <div class="card-header card-header-primary">
+                                        <h3><strong>{{this.title}}</strong></h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="tab-content">
+                                            <img class="card-img-top" src="{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+                                            <h5><strong>Localização:</strong> {{this.local}}</h5>
+                                {{/with}}
+                                            <h5 class="card-text"><strong>Quantidade de hospedes:</strong>  {{this.hostId.qntHosp}}</h5>
+                                            <h5><strong>Price: </strong> R${{this.totalValue}},00</h5>
+                                            <h5><strong>Checkin: </strong>{{this.startDate}}</h5>
+                                            <h5><strong>Checkout: </strong>{{this.endDate}}</h5>
+                                        </div>
+                                    </div>
+                  
                                 </div>
-                                
-                                <p>Checkin: {{this.startDate}}</p>
-                                <p>Checkout: {{this.endDate}}</p>
+                            </div>  
+                        </div> 
+                            {{/each}}
+                            {{else}}
+                            <div role="main" class="inner cover text-center" style="width:1400px;">
+                                <h1 class="title cover-heading">NO BOOKINGS IN AGENDA</h1>
                             </div>
-                        </div>
-               
-                    {{/each}}
+                            {{/if}}
                 </div>
             </div>
         </div>
+        
+
+
+
     </div>
 </div>
 

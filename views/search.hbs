@@ -38,11 +38,16 @@
                             
                             <div class="content" style="width: 400px;">
                                 <h3 class="ml-4">{{this.title}}</h3>
-                                <h3><small><strong>R$ {{this.preco}}</strong>/noite</small></h3>
+                                <h3><small><strong>R$ {{this.preco}}/noite</strong></small></h3>
+
+                                <div>
                                 <h5 class="tag mt-4 mb-4">{{this.espaco}}</h5>
+                                
                                 {{#each comodidades}}
-                                    <h5 class="tag mt-4 mb-4" style="overflow-wrap: break-word"> {{this}}</h5></span>
+                                        <h5 class="tag mt-4 mb-4" style="overflow-wrap: break-word"> {{this}}</h5></span>
                                 {{/each}}
+                                </div>
+                                
                                 <h5 class=" tag mb-4 mt-4">Internet</h5>
                                 <span ><h4 class="tag  mt-4 mb-4">Qnt de hospedes: {{this.qntHosp}} </h4></span>
                                 

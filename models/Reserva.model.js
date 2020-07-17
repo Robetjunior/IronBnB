@@ -16,7 +16,7 @@ const reservaSchema = new Schema (
             trim: true
         },
         hostId: {
-            type: [{ type: Schema.Types.ObjectId, ref: 'Host' }],
+            type:  Schema.Types.ObjectId, ref: 'Host' ,
             required: true,
             trim: true
         },

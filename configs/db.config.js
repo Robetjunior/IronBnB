@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/basicAuth';
-
+const MONGODB_URI = process.env.MONGODB_URI || process.env.MONGOLAB_PUCE_URI;
+console.log(MONGODB_URI)
 mongoose
   .connect(MONGODB_URI, {
     useNewUrlParser: true,
