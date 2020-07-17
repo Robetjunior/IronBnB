@@ -231,14 +231,15 @@ body {
     border:1px solid lightseagreen;
     border-right:none!important;
     border-left:none!important;
-    width: 50% !important;
+    
     border-radius: 0!important;
 }
 #search{
   border:1px solid lightseagreen;
-  width: 220%  ;
+
   border-top-right-radius: 0%;
   border-bottom-right-radius: 0%;
+  
 }
   .imgbg{
   
