@@ -2,11 +2,11 @@
 .cabeca{
         color: white;
         width: 100%;
-        height: 92vh;
+        height: 100vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: rgba(51, 20, 2, 0.5);
-z-index: 2;
+        background-color: rgba(15, 11, 8, 0.5);
+z-index: 0;
         background-position: center;
         display: flex;
         flex-direction: column;
@@ -22,7 +22,7 @@ z-index: 2;
         115deg,
         rgba(204, 85, 16, 0.5),
         #be1cbe80),
-        url(./images/chaleRubi.jpg);
+      
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -35,8 +35,8 @@ z-index: 2;
         background-image:linear-gradient(
         115deg,
         rgba(204, 85, 16, 0.5),
-        rgba(190, 28, 190, 0.5)),
-        url(./images/chaleAlpes.png);
+        rgba(190, 28, 190, 0.5));
+   
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -59,20 +59,20 @@ z-index: 2;
 
 <div class="jumbotron text-center w-100 h-25" style="vertical-align: middle; z-index: 3!important;width:auto; padding: px!important;background-color: rgba(255, 255, 255, 0)!important">
   
-    <form class="w-75 " style=";z-index: 6!important;"action="/search" method="GET">
+    <form class="w-50 " style=";z-index: 6!important;"action="/search" method="GET">
             {{!-- <h1 style="z-index: 6!important;">Ironbnb</h1> --}}
-        <div class="form-row div-form w-100" style="padding: 40px!important;background-color: rgba(7, 0, 0, 0.1
+        <div class="form-row div-form w-100" style="padding: 40px!important;background-color: rgba(7, 0, 0, 0
         )!important; border-radius:20px" >
             
-            <div class="pr-4 w-50">
+            <div class="pr-4 w-75">
                 <label for="search" class="ml-4 w-100" style="font-size: 20px;color: white  ;margin:3px 2px 2px; ">Localização</label>
                 <input type="text"class="ml-4 pr-4 search-field pesquisa-local w-100"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2"> </div>
-                <div class=" w-25   ">  
-                    <label for="name" class="ml-4  w-100" style="font-size: 20px ;color:white ;10px ;margin:3px 2px 2px; ">Qtd.Hóspedes</label>
-                    <input   type="number"  name="number" id="number" class=" search-field pesquisa-hospedes w-100" placeholder="0-10" min="0" max="10" type="number" > 
+                <div class=" w-10   ">  
+                    <label for="name" class="ml-4  w-100" style="font-size: 20px ;color:transparent ;10px ;margin:3px 2px 2px; ">___ </label>
+                    <input   type="number"  name="number" id="number" class=" search-field pesquisa-hospedes w-100" placeholder="Qtd.Hóspedes" min="0" max="100" type="number" > 
                 </div>        
                              
-                <div class=" w-25" >
+                <div class=" w-10" >
                     <label for="name" style=" font-size: 20px; color:transparent ;10px ;margin:3px 2px 2px; ">___</label>
                     <button class="search-botao fa-3x fa fa-search  pr-4 w-100" type="submit"></button>
                 </div>
