@@ -189,43 +189,7 @@ font-size: 12px;
                         </div>
                     </div> --}}
             {{/with}}
-=======
-<div class="jumbotron text-center" style="padding: 10px!imporante;background-color: rgba(7, 0, 0, 0.1)!important">
-    <div class="jumbotron text-center" style="padding: 10px!imporante;background-color: rgba(7, 0, 0, 0.1)!important">
-        
-<div class="jumbotron text-center" style="padding: 10px!imporante;background-color: rgba(7, 0, 0, 0.1)!important">
 
-<div class="container">
-    {{#with host}}
-        <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-            <img class="card-img-top" src="{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
-        </div>
-        <div class="jumbotron">
-        <div class=" d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div class=" jumbotron text-centerbg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <h2>{{this.title}}</h2>
-                <p>Tipo de host: {{this.espaco}} | Qntd de hospedes: {{this.qntHosp}}</p>
-                <p>{{this.descricao}}</p>
-                {{#each comodidades}}
-                    <p>{{this}}</p>
-                {{/each}}
-            </div>
-            </div>
-            <div class=" jumbotron text-center bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"> 
-
-                <h3>Preco: {{this.preco}}/noite</h3>
-            
-                <form action="/search/{{this.id}}/reserva" class="form-signin jumbotron " method="POST">
-                <label class="rol"for="startDate">Checkin</label> 
-                    <input class="rol" id="checkin" name="startDate" style="width:40%" type="date"> 
-                     <label class="rol"for="endDate">Checkout</label></span>
-                    <input  class="rol" name="endDate" style="width:40%"type="date">
-                    <button class="rol"type="submit" class="btn btn-sm btn-primary">
-                        Reservar
-                    </button>
-                </form>
-            </div>
->>>>>>> 3b4ed702fead0a0d3b67ee616e5ebf70a0452855
         </div>
     </div>
 </div>

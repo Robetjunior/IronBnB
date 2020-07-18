@@ -23,20 +23,20 @@
     
 </div>
 {{!-- Filtro da Pesquisa de Hosts --}}
-<div class="corpo" >
-<div class="album" > 
-    <div class="card-deck "  >
+<div class="corpo jumbotron" >
+<div class="album jumbotron"  > 
+    <div class="card-deck  "  >
         <div class="row " >
             {{#each host}}
-                <div class="col-md-4" >
-                    <div class="card mb-4 shadow-sm" style="width:400px;	border-radius: 10%;">
+                <div class="col-md-3" style="" >
+                    <div class="card shadow-sm mt-4" style="width:400px;	border-radius: 10%;">
                        <div class="card_new card-img-top" style="	border-radius: 10%;">
                             <div class=" card-body imgbox" style=" margin-bottom =10px    width:100%	;border-radius: 10%;">
                                     <a href="/search/{{this.id}}" type="button" >
                                 <img class="img_host" src="{{this.imgPath}}" style="border-radius: 10% ;margin-bottom:10px;" width="400px" height="450px" alt="tah"> </a>
                             </div>
                             
-                            <div class="content" style="width: 400px;">
+                            <div class="content row ml-1" style=" left:-1%;width:100%;">
                                 <h3 class="ml-4">{{this.title}}</h3>
                                 <h3><small><strong>R$ {{this.preco}}/noite</strong></small></h3>
 
@@ -45,10 +45,10 @@
                                 
                                 {{#each comodidades}}
                                         <h5 class="tag mt-4 mb-4" style="overflow-wrap: break-word"> {{this}}</h5></span>
-                                {{/each}}
+                                {{/each}}<h5 class=" tag mb-4 mt-4">Internet</h5>
                                 </div>
                                 
-                                <h5 class=" tag mb-4 mt-4">Internet</h5>
+                                
                                 <span ><h4 class="tag  mt-4 mb-4">Qnt de hospedes: {{this.qntHosp}} </h4></span>
                                 
                             </div>
@@ -60,3 +60,8 @@
     </div>
 </div>
 </div> 
+
+
+card_new  imgbox img_host
+
+corpo album
