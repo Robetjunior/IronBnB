@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
 html{
   height:100%
 }
@@ -6,9 +9,7 @@ body {
   min-height: 100%;
   padding: 0;
   margin: 0;
-  position:relative;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  
+  position:relative;  
 }
 
 a {
@@ -81,13 +82,6 @@ ul li {
   line-height: 20px ;
 }
 
-#to-right {
-  display: flex !important;
-  align-items: center !important;
-  padding: 1em;
-  float: right !important;
-}
-
 #logout-form {
   margin: 0;
   padding: 0;
@@ -107,31 +101,6 @@ ul li {
   margin: 0;
 }
 
-#to-right span {
-  color: #43a3e6;
-  font-size: 1.5em;
-}
-
-#form h2 {
-  display: flex;
-  justify-content: center;
-}
-
-#to-left {
-  float: left;
-}
-
-#to-left p a {
-  color: #000;
-  font-weight: bold;
-  font-size: 2em;
-}
-
-
-#nada{
-  background-color: none;
-}
-
 .footer{
   background:#014547;
   color: #fff;
@@ -145,47 +114,10 @@ ul li {
   position: fixed!important;
 }
 
-
-.btn_white{
-  background-color: white ;
-  border-right:none !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-}
-#div-center{
-  align-content: center;
-  
-}
-#page-container {
-  position: relative;
-  min-height: 800px;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-}
-
-
-.index-N-hospedes-search{
-  background-color: white;
-  color: #0a68ac!important;
-}
-
-.index-price-search{
-  background-color: white!important;
-  color: #0a68ac!important
-  
-}
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
 * {
 	box-sizing: border-box;
 }
 
-#logoSpot {
-  font-size: 50px;
-}
 .error-message {
 	background: #F02B63;
 	box-sizing: border-box;
@@ -207,6 +139,8 @@ ul li {
     min-height: 100vh;
     color: #fff
 }
+
+
 .card_new{
    border-radius: 10%;
     width: 350px;
@@ -218,7 +152,7 @@ ul li {
 	border-radius: 10%;
     position: relative;
     top: -7%;
-    left:-4%;
+    left:-5.5%;
     width: 100%;
     height: 100%;
 }
@@ -236,9 +170,9 @@ ul li {
 .card_new .content{
 	border-radius: 10%;
     position: absolute;
-    left:-1px;
+   
     bottom: 0;
-    width: 101%;
+    width: 100%;
     height: 100px;;
     padding: 12px;
     background: #008bcc;;
@@ -250,9 +184,9 @@ ul li {
 
 .card_new:hover .content{
 	border-radius: 10%;
-    width: 101%;
+    width: 100%;
     height:60%;
-    left:-1px;
+   
     bottom:0;
 }
 
@@ -288,7 +222,6 @@ h2{
     box-shadow: 0 0 5em rgba(0, 0 ,0 0.4);
 }
 
-    
     .search-field{
         height: 100%;
         width: 100%;
@@ -299,13 +232,15 @@ h2{
         
     }
     .pesquisa-local{
-          
+      border-radius: 25px !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
           font-size: 30px
     }
     .pesquisa-hospedes{
      
    
-     font-size: 30px
+     font-size: 25px
   ;
     }
     .search-botao{
@@ -381,90 +316,51 @@ h2{
     }
     
 
-    [data-am-slides] {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-     /* Navigation */
-     }
-     
-     [data-am-slides] input[type="radio"] {
-       position: fixed;
-       top: -9999px;
-     }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(5) ~ .images .image:nth-child(5) { opacity: 1; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(5) ~ .navigation .dot:nth-child(5) { background-color: #29acbb; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(5) ~ .navigation .dot:nth-child(5):hover { opacity: 1; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(4) ~ .images .image:nth-child(4) { opacity: 1; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(4) ~ .navigation .dot:nth-child(4) { background-color: #29acbb; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(4) ~ .navigation .dot:nth-child(4):hover { opacity: 1; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(3) ~ .images .image:nth-child(3) { opacity: 1; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(3) ~ .navigation .dot:nth-child(3) { background-color: #29acbb; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(3) ~ .navigation .dot:nth-child(3):hover { opacity: 1; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(2) ~ .images .image:nth-child(2) { opacity: 1; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(2) ~ .navigation .dot:nth-child(2) { background-color: #29acbb; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(2) ~ .navigation .dot:nth-child(2):hover { opacity: 1; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(1) ~ .images .image:nth-child(1) { opacity: 1; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(1) ~ .navigation .dot:nth-child(1) { background-color: #29acbb; }
-     
-     [data-am-slides] input[type="radio"]:checked:nth-child(1) ~ .navigation .dot:nth-child(1):hover { opacity: 1; }
-     
-     [data-am-slides] .image {
-       position: absolute;
-       top: 0;
-       bottom: 0;
-       left: 0;
-       right: 0;  
-       opacity: 0;
-       -webkit-transition: opacity 400ms ease;
-       transition: opacity 400ms ease;
-       background-size: cover;
-       background-position: center;
-       background-repeat: no-repeat;
-     }
-     
-     [data-am-slides] .navigation {
-       position: absolute;
-       bottom: 15px;
-       left: 50%;
-       -webkit-transform: translateX(-50%);
-       transform: translateX(-50%);
-     }
-     
-     [data-am-slides] .dot {
-       display: inline-block;
-       width: 15px;
-       height: 15px;
-       margin: 0 2px;
-       border-radius: 50%;
-       background-color: rgba(255, 255, 255, 0.8);
-       cursor: pointer;
-       -webkit-transition: opacity 200ms ease;
-       transition: opacity 200ms ease;
-     }
-     
-     [data-am-slides] .dot:hover { opacity: 0.8; }
 
-     .slides {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
+    /* Pagina INDEX */
+
+    .cabeca{
+      color: white;
+      width: 100%;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgba(15, 11, 8, 0.8);
+z-index: 2;
+
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      font-family: sans-serif;
+  }
+  @media only screen and (max-width: 1200px) and (min-width: 750px) {
+   .cabeca{   
+   display: flex;
+      color: white;
+      background-image:  linear-gradient(
+      115deg,
+      rgba(204, 85, 16, 0.5),
+      #be1cbe80);
+    
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      }
+      }
+      @media only screen and (max-width: 749px) and (min-width: 400px) {
+  .cabeca{
+      color: white;
+      background-image:linear-gradient(
+      115deg,
+      rgba(204, 85, 16, 0.5),
+      rgba(190, 28, 190, 0.5));
+ 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+  }
+      }

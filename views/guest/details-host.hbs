@@ -1,196 +1,125 @@
-<<<<<<< HEAD
-<style>.bordas15{
-     border-radius: 17%;
-     border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-}
-
-.texto-descricao{
-text-align: start;
-color:white;
-font-size: 20px!important
-}
-.texto-titulo{
-    color: white;
-    text-align: start;
-    align-self: flex-start;
-}
-.texto-espaco{
-text-align: start;
-color:white;
-font-size: 12px;
-}
-
-.texto-tipos{
-text-align: start;
-color:white;
-font-size: 12px;
-}
-.left{
-    border-radius:50%;
-    height:50%;
-    top:25%;
-    background-color: rgba(7, 0, 0, 0.1);
-}
-.right{
-    border-radius: 50%;
-    height:50%;
-    top:25%
-}
-
-.reserva-host{
-    background-color: rgba(20, 10, 10, 0.493)
-}
-
-</style>
-
-<div class="jumbotron text-center" style=";background-color: rgba(7, 0, 0, 0.5)!important">
-        <div class="umbotron text-center" style=";background-color: rgba(7, 0, 0, 0.0)!important">        
-        <div class="jumbotron text-center" style="p;background-color: rgba(7, 0, 0, 0.)0!important">
-            <div class="container row "style="background-color: rgba(7, 0, 0, 0.0)!important">
-
-                {{#with host}}
-                <div   class="jumbotron w-50">
-                    <p>{{this.title}}</p>
-                    <img class="w-100 " src="/images/chaleRubi.jpg" style="border-radius: 10%;" alt="foto interna 1">
-                {{!-- <img class="w-100 " src="/zimages/{{this.imgPath}}" alt="host"  data-holder-rendered="true"> --}}
-</div>
+<div class="jumbotron text-center" style=";background-color: rgba(7, 0, 0, 0.5)!important">      
+    <div class="jumbotron text-center" style="p;background-color: rgba(7, 0, 0, 0.)0!important">
+        <div class="container w-100 row "style="background-color: rgba(7, 0, 0, 0.0)!important">
+            
+            {{#with host}}
+                <div class="jumbotron w-50">
+                    <img class="w-100 " src="/zimages/{{this.imgPath}}" alt="host"  data-holder-rendered="true">
+                </div>
                 
                 <div class="jumbotron w-25 column h-50" >
                     <div class="w-25 h-75 jumbotron" ></div>
-                      <div class="w-25 h-75 jumbotron" ></div>
-                    <div class="jumbtron w-100">
+                        <div class="w-25 h-75 jumbotron" ></div>
+                            <div class="jumbtron w-100">
                     
-                        <div class="w-100 ">
-                           <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
-    <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic"  data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                            </ol>
+                            <div class="w-100 ">
+                                <div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
+                                
+                                <!-- Indicators -->
+                                                                    
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic"  data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                                    </ol>
 
-    <!-- Wrapper for slides -->
-                            <div class="carousel-inner  " role="listbox" style="">
-                                <div class="item active ">
-                                   
-                                    <img class="w-100 bordas15" src="/zimages/{{this.imgPath}}" alt="host"  data-holder-rendered="true">
+                            <!-- Wrapper for slides -->
+
+                                    <div class="carousel-inner  " role="listbox" style="">
+                                        <div class="item active ">
+                                            <img class="w-100 bordas15" src="/images/chaleCampoJordao.jpg" alt="host"  data-holder-rendered="true">
+                                        </div>
+
+                                        <div class="item">
+                                            <img class="w-100 bordas15" src="/images/chaleRubi.jpg" alt="foto interna 1">
+                                        </div>
+
+                                        <div class="item">
+                                            <img class="w-100 bordas15" src="/images/flatCampo.jpg" alt="foto interna 2">
+                                        </div>
+
+                                        <div class="item">
+                                            <img class="w-100 bordas15" src="/images/casaFluila.jpg" alt="foto interna 3">
+                                        </div>
+
+                                        <div class="item">
+                                            <img class="w-100 bordas15" src="/images/vilaChale.jpg" alt="foto interna 4">
+                                        </div>
+                                    </div>
+
+                                         <!-- Controls -->
+
+                                    <a class=" carousel-control left " href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left " aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                    </a>
+
+                                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                    </a>
                                 </div>
-
-                                <div class="item">
-                                    <img class="w-100 bordas15" src="/images/chaleRubi.jpg" alt="foto interna 1">
-                                </div>
-
-                                <div class="item">
-                                    <img class="w-100 bordas15" src="/images/flatCampo.jpg" alt="foto interna 2">
-                                </div>
-
-                                <div class="item">
-                                    <img class="w-100 bordas15" src="/images/casaFluila.jpg" alt="foto interna 3">
-                                </div>
-
-                                <div class="item">
-                                    <img class="w-100 bordas15" src="/images/vilaChale.jpg" alt="foto interna 4">
-                                </div>
-
                             </div>
-    <!-- Controls -->
-                            <a class=" carousel-control left " href="#carousel-example-generic" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left " aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                        </div>
                         </div>
                     </div>  
 
                     <div class="jumbotron w-25  h-50"style="background-color: rgba(7, 0, 0, 0.4)!important">
   
-                
-                       <p class=""><svg width="15%" height="15%" viewBox="0 0 16 16" class="bi bi-building" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
-                                <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
-                                </svg>{{this.title}}
+                            <p class=""><svg width="15%" height="15%" viewBox="0 0 16 16" class="bi bi-building" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+                            <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+                            </svg>{{this.title}}
 
- <h3 class="texto-titulo " style="font-size:x-large">Preço: {{this.preco}},00 R$/noite </h3></p> 
+                            <h3 class="texto-titulo " style="font-size:x-large">Preço: {{this.preco}},00 R$/noite </h3></p> 
 
                             {{!-- <img class="card-img-top bordas15" src="/zimages/{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true"> --}}
                          
                             <p class=" texto-espaco"><svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-door-closed-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M4 1a1 1 0 0 0-1 1v13H1.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2a1 1 0 0 0-1-1H4zm2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                             </svg>{{this.espaco}}</p> 
-                                <p class=" texto-espaco"><svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
-                                </svg>Até {{this.qntHosp}} de hospedes. </p>
+                            
+                            <p class=" texto-espaco"><svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                            </svg>Até {{this.qntHosp}} de hospedes. </p>
+                            
                             {{#each comodidades}} 
                             <h3 class="texto-tipos">{{this}}  </h3>
-                            <h3>Wireless</h3>     <svg width="5%" height="5%" viewBox="0 0 16 16" class="bi bi-wifi" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.385 6.115a.485.485 0 0 0-.048-.736A12.443 12.443 0 0 0 8 3 12.44 12.44 0 0 0 .663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.717 2.164.204.148.489.13.668-.049z"/>
-                            <path d="M13.229 8.271c.216-.216.194-.578-.063-.745A9.456 9.456 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.577 1.336c.205.132.48.108.652-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.472 6.472 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.408.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.611-.091l.015-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .708 0l.707-.707z"/>
-                            </svg>
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-handbag" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M8 1a2 2 0 0 0-2 2v4.5a.5.5 0 0 1-1 0V3a3 3 0 0 1 6 0v4.5a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2z"/>
-                             <path fill-rule="evenodd" d="M3.405 6a.5.5 0 0 0-.498.45l-.912 6.9A1.5 1.5 0 0 0 3.488 15h9.024a1.5 1.5 0 0 0 1.493-1.65l-.913-6.9a.5.5 0 0 0-.497-.45h-9.19zm-1.493.35A1.5 1.5 0 0 1 3.405 5h9.19a1.5 1.5 0 0 1 1.493 1.35L15 13.252A2.5 2.5 0 0 1 12.512 16H3.488A2.5 2.5 0 0 1 1 13.251l.912-6.9z"/>
-                            </svg>
-
-
-                                {{/each}}
+                            {{/each}}
+                            
                             <p class="texto-descricao">{{this.descricao}}  </p>  
-                             <div class=" h-100"> <form action="/search/{{this.id}}/reserva" class="reserva-host form-signin jumbotron w-100 " method="POST">
-                                   <div class=" h-25">  <label class="rol"for="startDate">Checkin   </label>
-                                    <input class="rol" id="checkin" name="startDate" style="width:50%;" type="date"><svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-calendar-date" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
-  <path fill-rule="evenodd" d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
-  <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"/>
-</svg> </div>
-                                   <div class=" h-25">  <label class="rol"for="endDate">Checkout</label> 
-                                    
-                                    <input  class="rol" name="endDate" style="width:50%"type="date">
-                                        <svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-calendar-date-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM0 5h16v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5zm9.336 7.79c-1.11 0-1.656-.767-1.703-1.407h.683c.043.37.387.82 1.051.82.844 0 1.301-.848 1.305-2.164h-.027c-.153.414-.637.79-1.383.79-.852 0-1.676-.61-1.676-1.77 0-1.137.871-1.809 1.797-1.809 1.172 0 1.953.734 1.953 2.668 0 1.805-.742 2.871-2 2.871zm.066-2.544c.625 0 1.184-.484 1.184-1.18 0-.832-.527-1.23-1.16-1.23-.586 0-1.168.387-1.168 1.21 0 .817.543 1.2 1.144 1.2zm-2.957-2.89v5.332H5.77v-4.61h-.012c-.29.156-.883.52-1.258.777V8.16a12.6 12.6 0 0 1 1.313-.805h.632z"/>
-</svg> </div>
+                             
+                                <div class=" h-100"> 
+                                    <form action="/search/{{this.id}}/reserva" class="reserva-host form-signin jumbotron w-100 " method="POST">
+                                        <div class=" h-25">  <label class="rol"for="startDate">Checkin   </label>
+                                            <input class="rol" id="checkin" name="startDate" style="width:50%;" type="date"><svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-calendar-date" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
+                                            <path fill-rule="evenodd" d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
+                                            <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"/>
+                                            </svg> 
+                                        </div>
 
-                                   <div class="h-50">  <button class=""type="submit" style=" width:60% ;"  class="glyphicon-ok btn  btn-primary">
-                                    Reservar <svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-</svg>
+                                        <div class=" h-25">  <label class="rol"for="endDate">Checkout</label> 
+                                            <input  class="rol" name="endDate" style="width:50%"type="date">
+                                            <svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-calendar-date-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM0 5h16v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5zm9.336 7.79c-1.11 0-1.656-.767-1.703-1.407h.683c.043.37.387.82 1.051.82.844 0 1.301-.848 1.305-2.164h-.027c-.153.414-.637.79-1.383.79-.852 0-1.676-.61-1.676-1.77 0-1.137.871-1.809 1.797-1.809 1.172 0 1.953.734 1.953 2.668 0 1.805-.742 2.871-2 2.871zm.066-2.544c.625 0 1.184-.484 1.184-1.18 0-.832-.527-1.23-1.16-1.23-.586 0-1.168.387-1.168 1.21 0 .817.543 1.2 1.144 1.2zm-2.957-2.89v5.332H5.77v-4.61h-.012c-.29.156-.883.52-1.258.777V8.16a12.6 12.6 0 0 1 1.313-.805h.632z"/>
+                                            </svg> 
+                                        </div>
 
-                                    </button>
-                                </form></div>
+                                        <div class="h-50">  <button class=""type="submit" style=" width:60% ;"  class="glyphicon-ok btn  btn-primary">
+                                        Reservar <svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                        </svg>
+                                        </button>
+                                    </form>
+                                </div>
                     </div>
-                   
-                    {{!-- <div class="jumbotron w-100 ">
-                        <div class="jumbotron w-100 row">
-                              <div class="col jumbotron w-50 bg-light mr-md-3 p-4 px-3 pt-md-5 px-md-5  overflow-hidden">
-                                <div class="jumbotron w-75"> --}}
-                                 {{!-- <h2>{{this.title}}  </h2> --}}
-                                {{!-- <p>Tipo de host: {{this.espaco}} | Qntd de hospedes: {{this.qntHosp}} </p>
-                                <div class="jumbotron w-100">
-                                <p>{{this.descricao}}  </p></div>
-                                <div class="jumbotron w-100">
-                                
-                                {{#each comodidades}}
-                                    <p >{{this}} </p> 
-                                {{/each}}
-                                </div>
-                                </div>
-                            </div>
-                            <div class="col  jumbotron w-50 text-center bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">  --}}
-                                {{!-- <h3>Preco: {{this.preco}}/noite </h3> --}}
-                                
-                            {{!-- </div>
-                                
-                        </div>
-                    </div> --}}
+                </div>
+                  
             {{/with}}
 
         </div>
     </div>
 </div>
-<div class="jumbotron"> </div>
+<div class="jumbotron"> <div class="jumbotron"> </div></div>

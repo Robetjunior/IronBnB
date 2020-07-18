@@ -1,82 +1,75 @@
-
+							{{!-- Espaçamento da tela realizado com Jumbotron --}}
 
 <section class="jumbotron" >
-
 	<section class="jumbotron" >
 		<section class="jumbotron" >
 			<section class="jumbotron d-flex justify-content-center" >
 
+							{{!-- Menu de Sign up e Sign in --}}
 				
 				<div class="container p-4 m-4" id="container">
-	<div class="form-container sign-up-container">
-		<form action="/login/create" class="formulario" method="POST" class="form-signin">
+					<div class="form-container sign-up-container">
+						<form action="/login/create" class="formulario" method="POST" class="form-signin">
 
-		<img class="mb-2 mt-4" src="./images/icon1.png" alt="" width="150px" >
+							<img class="mb-2 	" src="./images/icon1.png" alt="" width="110px" >
+							<h2> Sign up</h2>
 
-			<h1> Sign up</h1>
-			<div class="social-container">
-				<a href="/auth/facebook" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="/auth/google-plus" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="/auth/linkedin" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-      	<h1 class="h3 mb-3 font-weight-normal"></h1>
-      	<input type="text" name="username" id="input-username" placeholder="Fulano Beltrano Ciclano" required/>
-      	<input type="email" name="email" id="input-email" placeholder="example@ironbnb.com" required/>
-      	<input type="password" name="password" id="input-password" placeholder="***********" required/>
-		<button type="submit">Create account</button>
-		
-        <p class="mt-5 mb-3 text-muted text-center">© Ironbnb 2020</p>
-    
-		</form>
-	</div>
+							{{!-- <div class="social-container">
+								<a href="/auth/facebook" class="social"><i class="fab fa-facebook-f"></i></a>
+								<a href="/auth/google-plus" class="social"><i class="fab fa-google-plus-g"></i></a>
+								<a href="/auth/linkedin" class="social"><i class="fab fa-linkedin-in"></i></a>
+							</div> --}}
+
+      						<h1 class="h3 mb-3 font-weight-normal"></h1>
+      						<input type="text" name="username" id="input-username" placeholder="Fulano Beltrano Ciclano"required />
+      						<input type="email" name="email" id="input-email2" placeholder="example@ironbnb.com" required/>
+      						<input type="password" name="password" id="input-password2" placeholder="***********" required/>
+							<button type="submit">Create account</button>
+						</form>
+					</div>
 	 
-	<div class="form-container sign-in-container">
-		<form action="/login" class="formulario form-signin" method="POST">
-		<img class="mb-2 mt-4" src="./images/icon1.png" alt="" width="150px" >
-			<h1>Login </h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
+				<div class="form-container sign-in-container">
+					<form action="/login" class="formulario form-signin" method="POST">
 
-			
+						<img class="mb-2 " src="./images/icon1.png" alt="" width="110px" >
+						<h2>Login </h2>
 
-			<span>Use your account</span>
-			<input ttype="email" name="email" id="input-email" placeholder="example@ironbnb.com" required/>
-			<input type="password" name="password" placeholder="Password" required/>
+						{{!-- <div class="social-container">
+							<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+							<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+							<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+						</div> --}}
 
-			<a href="#">Forgot your password?</a>
-			<button type="submit">Login</button>
+						<span>Use your account</span>
+						<input ttype="email" name="email" id="input-email" placeholder="example@ironbnb.com" />
+						<input type="password" name="password" placeholder="Password" />
+						<a href="#">Forgot your password?</a>
+						<button type="submit">Login</button>
+					</form>
+				</div>
 
-        <p class="mt-5 mb-3 text-muted text-center">© Ironbnb 2020</p>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left" >
-				<h1>Hello my friend!</h1>
-				<p>Login your account and take a seat with us.</p>
-				<button class="ghost" id="signIn">Login</button>
-				{{#if errorMessage}}
-    <p class="error">{{errorMessage}}</p>
-    {{/if}}
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Welcome my new friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp">Sign up</button>
-{{#if errorMessage}}
-    <p class="error">{{errorMessage}}</p>
-    {{/if}}
-			</div>
-			
-		</div>
-	</div>
-	</div>
+				<div class="overlay-container">
+					<div class="overlay">
+						<div class="overlay-panel overlay-left" >
+							<h1>Hello my friend!</h1>
+							<p>Login your account and take a seat with us.</p>
+							<button class="ghost" id="signIn">Login</button>
+							{{#if errorMessage}}
+    						<p class="error">{{errorMessage}}</p>
+    						{{/if}}
+						</div>
+
+					<div class="overlay-panel overlay-right">
+						<h1>Welcome my new friend!</h1>
+						<p>Enter your personal details and start journey with us</p>
+						<button class="ghost" id="signUp">Sign up</button>
+						{{#if errorMessage}}
+    					<p class="error">{{errorMessage}}</p>
+    					{{/if}}
+					</div>	
+				</div>
 			</section>
 		</section>
 	</section>
-
 </section>
 <script src="/javascripts/signup.js"></script>
