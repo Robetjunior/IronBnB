@@ -26,13 +26,13 @@
         </form>
     </div>
 {{!-- Filtro da Pesquisa de Hosts --}}
-<div class="corpo jumbotron" >
+<div class="corpo jumbotron"  
 <div class="album jumbotron"  > 
     <div class="card-deck  "  >
         <div class="row " >
             {{#each host}}
                 <div class="col-md-3" style="" >
-                    <div class="card shadow-sm mt-4" style="width:400px;	border-radius: 10%;">
+                    <div class="card shadow-sm mt-4" style="width:400px;border-radius: 10%;color:white">
                        <div class="card_new card-img-top" style="	border-radius: 10%;">
                             <div class=" card-body imgbox" style=" margin-bottom =10px    width:100%	;border-radius: 10%;">
                                     <a href="/search/{{this.id}}" type="button" >
@@ -40,8 +40,8 @@
                             </div>
                             
                             <div class="content row ml-1" style=" left:-1%;width:100%;">
-                                <h3 class="ml-4">{{this.title}}</h3>
-                                <h3><small><strong>R$ {{this.preco}}/noite</strong></small></h3>
+                                <h3 class="ml-4 pr-4">{{this.title}}</h3>
+                                <h3 class="pl-4"><small><strong style="color:white!important">R$ {{this.preco}}/noite</strong></small></h3>
 
                                 <div>
                                 <h5 class="tag mt-4 mb-4">{{this.espaco}}</h5>
