@@ -354,10 +354,18 @@ h2{
         color:white!important;
         font-size: 20px;
         font-weight: 600;
-
       } 
-      .logout-home{
-        color:white!important
+      .login-home:hover{
+        color:rgb(54, 2, 88)!important;
+        
+      }
+      .home-home:hover{
+        color:rgb(54, 2, 88)!important;
+    
+      }
+      .hosts-home:hover{
+        color:rgb(54, 2, 88)!important;
+
       }
       .hosts-home{
         color:white!important;
@@ -375,7 +383,10 @@ h2{
         font-size: 25px;
         font-weight: 600;
       }
-
+      .profile-home:hover{
+        color:rgb(54, 2, 88)!important;
+      
+      }
       .bg-half {
         background-color: rgba(13, 8, 15, 0.8);
       }
@@ -490,3 +501,48 @@ h2{
        border-radius: 0%;
       }
      
+      input{
+        background-color: rgba(173, 110, 214, 0.5)!important;
+      }
+      label{
+        color: rgb(54, 2, 88)!important;
+      }
+      
+      button{
+        background-color:rgb(54, 2, 88)!important ;
+        border:none !important
+      }
+      button:hover{
+        color:rgb(54, 2, 88)!important;
+        background-color:rgb(135, 66, 184)!important
+      }
+      .btn_padrao{
+        background-color:rgb(54, 2, 88)!important ;
+        border:none !important
+      }
+      .btn_padrao:hover{
+        color:rgb(54, 2, 88)!important;
+        background-color:rgb(135, 66, 184)!important
+      }
+      footer{
+        background-color: rgb(37, 2, 61)!important ;
+      }
+
+      .navbar{
+        background-color: rgb(105, 23, 160)!important;
+        color: rgb(37, 2, 61)!important
+      }
+      
+      .form-container{
+        background-color: rgb(105, 23, 160)!important
+      }
+
+      .jumbotron{
+        background-color: rgba(173, 110, 214, 0.5)!important;
+      }
+
+      .profile{
+        background-color: rgb(63, 9, 99)!important
+      }
+
+    
