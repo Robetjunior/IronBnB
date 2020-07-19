@@ -243,3 +243,37 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+.jumbotron{
+	background-color: rgba(128, 120, 120, 0.527);
+}
+
+/*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+.auto-grid {
+	--auto-grid-min-size: 20rem;
+	
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+	grid-gap: 1rem;
+  }
+  
+  
+  /* Presentational styles */
+  
+  .body1 {
+	background: #efefef;
+	padding: 1rem;
+	line-height: 1.4;
+	font-family: sans-serif;
+  }
+  
+  .li1 {
+	padding: 5rem 1rem;
+	text-align: center;
+	font-size: 1.2rem;
+;
+	color: #ffffff;
+  }

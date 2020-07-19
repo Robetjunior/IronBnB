@@ -1,4 +1,4 @@
-<div class="jumbotron  w-100 H-25" style=" z-index: 3!important;width:auto; padding: px!important;background-color: rgba(255, 255, 255, 0)!important">
+<div class="jumbotron  w-100 H-25" style=" z-index: 3!important;width:auto; padding: px!important;background-color: rgba(255, 255, 255, 0.5)!important">
   
         <form class="w-50 " style=";z-index: 6!important;"action="/search" method="GET">
         
@@ -7,59 +7,58 @@
             
                 <div class="pr-4 w-50 label-float">
                     <input type="text"class="ml-4 pr-4 search-field pesquisa-local w-100"name="search" id="search" placeholder="Para onde você quer ir ?" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <label class="ml-4 w-100 " style="font-size: 35px ">Localização</label>
+                    <label class="ml-4 w-100 " style="font-size: 20px ">Localização</label>
                     {{!-- <label for="search" class="ml-4 w-100" style="font-size: 25px;color: white  ;margin:3px 2px 2px; ">Localização</label> --}}
                 </div>
 
-                <div class=" w-25 label-float  ">  
+                <div class=" w-25 label-float2  ">  
                     <input   type="number"  name="number" id="number" class=" search-field pesquisa-hospedes w-100" placeholder="0-100" min="0" max="100" type="number" > 
-                    <label for="number" class="ml-4 h-100  w-50" style="font-size: 25px">Nº Hóspedes</label>
-                    {{!-- <label for="number" class="ml-4  w-50" style="font-size: 25px ; ;10px ;margin:3px 2px 2px; ">AAAAAAAA </label> --}}
+                    <label for="number" class="ml-4 h-100  w-50" style="font-size: 15px">Nº Hóspedes</label>
 
                 </div>        
                              
                 <div class=" w-25 " >
                    
-                    <button class="search-botao fa-3x fa fa-search  pr-4  w-50" style="margin-top:9px" type="submit"> </button>
+                    <button class="search-botao fa-2x fa fa-search  w-25" style="margin-top:8px" type="submit"> </button>
                 </div>
             </div>
         </form>
     </div>
-{{!-- Filtro da Pesquisa de Hosts --}}
-<div class="corpo jumbotron"  
-<div class="album jumbotron"  > 
-    <div class="card-deck  "  >
-        <div class="row " >
-            {{#each host}}
-                <div class="col-md-3" style="" >
-                    <div class="card shadow-sm mt-4" style="width:400px;border-radius: 10%;color:white">
-                       <div class="card_new card-img-top" style="	border-radius: 10%;">
-                            <div class=" card-body imgbox" style=" margin-bottom =10px    width:100%	;border-radius: 10%;">
-                                    <a href="/search/{{this.id}}" type="button" >
-                                <img class="img_host" src="{{this.imgPath}}" style="border-radius: 10% ;margin-bottom:10px;" width="400px" height="450px" alt="tah"> </a>
-                            </div>
-                            
-                            <div class="content row ml-1" style=" left:-1%;width:100%;">
-                                <h3 class="ml-4 pr-4">{{this.title}}</h3>
-                                <h3 class="pl-4"><small><strong style="color:white!important">R$ {{this.preco}}/noite</strong></small></h3>
+    {{!-- Filtro da Pesquisa de Hosts --}}
 
-                                <div>
-                                <h5 class="tag mt-4 mb-4">{{this.espaco}}</h5>
-                                
-                                {{#each comodidades}}
-                                        <h5 class="tag mt-4 mb-4" style="overflow-wrap: break-word"> {{this}}</h5></span>
-                                {{/each}}<h5 class=" tag mb-4 mt-4">Internet</h5>
-                                </div>
-                                
-                                
-                                <span ><h4 class="tag  mt-4 mb-4">Qnt de hospedes: {{this.qntHosp}} </h4></span>
-                                
-                            </div>
+   
+<div class="container-fluid">
+    <div class="row caixa ">
+        {{#each host}}
+        <div class="col-md-3 col-sm-6 col-lg-4 mb-4 ">
+            
+            <div class="card text-center imgCaixa  h-100 " style="background-color: rgba(77, 55, 90, 0.5)">
+                <h1 style="background-color: rgb(91, 0, 114);  color:white!important" class="description  p-4"> {{this.title}}</h1>
+                <a href="/search/{{this.id}}" type="button" >
+                <img class=" arredondamento card-img-top h-100" src="{{this.imgPath}}"  alt="Card image"> </a>
+                <div class=" card-body neg d-flex justify-content-between" style="background-color: rgb(124, 24, 163)">
+                       
+                    <div class="contente card-title d-flex  justify-content-between" style=" color:white!important">
+                      <h3> {{this.espaco}} </h3>
+                     
+                       
+                    </div>
+                    <div class="contente card-title " style=" color:white!important">
+                      <h3>  R$ {{this.preco}}/noite</h3>
+                        <div class=" card-text p-4  mt-4 justify-content-between" style=" color:white!important">
+                         {{#each comodidades}}
+                       
+                            <h4 class="tag " style="overflow-wrap: break-word"> {{this}}</h4>
+                        {{/each}}
                         </div>
-                    </div>                   
+                    </div>
+
+                   
+                   
                 </div>
-            {{/each}}
+            </div>
         </div>
+           {{/each}}
     </div>
 </div>
-</div> 
+

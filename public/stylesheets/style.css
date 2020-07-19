@@ -104,7 +104,7 @@ ul li {
 .footer{
   background:#014547;
   color: #fff;
-  padding:15px;
+  padding:10px;
   display: block;
   align-items:center;
   justify-content: flex-start;
@@ -114,9 +114,9 @@ ul li {
   position: fixed!important;
 }
 
-* {
+/* * {
 	box-sizing: border-box;
-}
+} */
 
 .error-message {
 	background: #F02B63;
@@ -128,7 +128,7 @@ ul li {
 }
 
 
-.corpo{
+/* .corpo{
 	margin: 0;
     padding: 0;
     font-family: "poppins";
@@ -138,39 +138,21 @@ ul li {
     align-content: center;
     min-height: 100vh;
     color: #fff
-}
+} */
 
 
 .card_new{
-   border-radius: 10%;
-    width: 350px;
-    height: 450px;
+
+
+
     transition: 0.3s ease-out;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.7);
+  
 }
-.card_new .imgbox{
-	border-radius: 10%;
-    position: relative;
-    top: -7%;
-    left:-5.5%;
-    width: 100%;
-    height: 100%;
-}
-.card_new.imgbox .img_host{
-	border-radius: 10%!important;
-	border: 0 solid white;
-    position: absolute;
-    top:10%;
-    left:0;
-    width: 100%;
-    height: 80%;
-    display: block;
-    transition: 0.5s;
-}
-.card_new .content{
+
+
+.content{
 	border-radius: 10%;
     position: absolute;
-   
     bottom: 0;
     width: 100%;
     height: 100px;;
@@ -182,7 +164,7 @@ ul li {
     opacity: 0.8;
 }
 
-.card_new:hover .content{
+.content:hover{
 	border-radius: 10%;
     width: 100%;
     height:60%;
@@ -199,7 +181,7 @@ ul li {
     text-align: justify;
     opacity: 0;
 }
-.content h5.description{
+.content  {
 -webkit-line-clamp: 5;
 overflow : hidden;
 text-overflow: ellipsis;
@@ -235,7 +217,7 @@ h2{
       border-radius: 25px !important;
       border-top-right-radius: 0 !important;
       border-bottom-right-radius: 0 !important;
-          font-size: 30px
+          font-size: 25px;
     }
     .pesquisa-hospedes{
      
@@ -244,8 +226,11 @@ h2{
   ;
     }
     .search-botao{
+      background-color:rgb(20, 169, 196) ;
         height: 100%;
-        width: 33%;
+        width: 50%;
+        border-color: purple;
+        border:none;
         border-radius: 25px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -326,16 +311,14 @@ h2{
       background-repeat: no-repeat;
       background-size: cover;
       background-color: rgba(15, 11, 8, 0.8);
-z-index: 2;
-
+    z-index: 2;
       background-position: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      
       font-family: sans-serif;
   }
-  @media only screen and (max-width: 1200px) and (min-width: 750px) {
+  /* @media only screen and (max-width: 1200px) and (min-width: 750px) {
    .cabeca{   
    display: flex;
       color: white;
@@ -363,4 +346,147 @@ z-index: 2;
       background-position: center;
       background-attachment: fixed;
   }
+      } */
+
+      
+
+      .login-home{
+        color:white!important;
+        font-size: 20px;
+        font-weight: 600;
+
+      } 
+      .logout-home{
+        color:white!important
       }
+      .hosts-home{
+        color:white!important;
+        font-size: 25px;
+        font-weight: 600;
+      }
+      .home-home{
+        color:white!important;
+        font-size: 25px;
+        font-weight: 600;
+        
+      }
+      .profile-home{
+        color:white!important;
+        font-size: 25px;
+        font-weight: 600;
+      }
+
+      .bg-half {
+        background-color: rgba(13, 8, 15, 0.8);
+      }
+
+
+      *{
+        margin:0;
+        padding:0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+      }
+
+
+      #facilities{
+        background-color: rgba(15, 11, 8, 0.8);
+        padding-left: 30px 0px;
+      }
+
+      #facilities h1{
+        font-weight: 900;
+        font-size: 34px;
+        padding-bottom: 5px;
+      }
+      .title{
+        text-align: center;
+        padding: 25px 0px;
+
+      }
+      .title p{
+        font-size:18px
+      }
+      .card-body{
+        box-shadow:  0 0 20px 7px rgba(15, 11, 8, 0.8);
+      }
+      .card{
+        margin:20px 10px ;
+        
+    
+
+        }
+      .card-body a{
+        color: green;
+        text-decoration: none;
+        font-size: 15px;
+        margin-top:auto;
+        font-weight: 600;
+      }
+      .card-body a:hover{
+        color: blue;
+        text-decoration: none;
+      }
+      
+
+
+      .caixa{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        flex-wrap: wrap;
+        padding:30px
+      }
+
+     .caixa .carta{
+        position: relative;
+     
+        background-color: #fff;
+        margin:30px 10px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow:  0 5px 20px rgba(0,0,0,0.5);
+        transition: 0.5s ease-in-out;;
+      }
+      .caixa .carta:hover{
+        height: 20%;
+      }
+      .caixa .carta .imgCaixa{
+        position: relative;
+        
+        top:-60px;
+        left: 20px;
+        z-index: 1;
+        box-shadow: 0 5px 20px rgba(0, 0 ,0 0.4);
+      }
+      .caixa .carta .imgCaixa img {
+       max-width: 100%;
+        border-radius: 4px;
+      }
+     
+      .caixa .carta .contente {
+        position: relative;
+        margin-top: -140px;
+        padding: 10px 15px ;
+        text-align: center;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+
+
+      }
+      
+      .caixa .carta:hover .contente{
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: 0.3s;
+      }
+
+      .arredondamento{
+       border-radius: 0%;
+      }
+     

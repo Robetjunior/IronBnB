@@ -21,14 +21,14 @@ body {
     width: 500px!important;
   }
   #number{
-    border:1px solid lightseagreen;
+background-color: rgba(255, 255, 255, 0.5);
     border-right:none!important;
     border-left:none!important;
     
     border-radius: 0!important;
 }
 #search{
-  border:2px solid lightseagreen!important;
+  background-color: rgba(255, 255, 255, 0.5);
 
   border-top-right-radius: 0%;
   border-bottom-right-radius: 0%;
@@ -60,14 +60,15 @@ body {
   .label-float{
     position: relative;
     
-  }
+  } 
   
   .label-float input{
-    border: 0;
+    border: 2px;
     border-bottom: 2px solid lightgrey;
-    outline: none;
+    outline: none;  
     min-width: 180px;
-    font-size: 35px;
+    
+    font-size: 25px;
     color: black  ;
     transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
@@ -77,7 +78,7 @@ body {
   }
   
   .label-float input:focus{
-    border-bottom: 2px solid #12b403;
+    border-bottom: 2px solid #53006d;
   }
   
   .label-float input::placeholder{
@@ -89,7 +90,7 @@ body {
     position: absolute;
     top: 0;
     left: 10%;
-    margin-top: 60px;
+    margin-top: 10%;
     transition: all .3s ease-out;
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
@@ -106,13 +107,71 @@ body {
   }
   .label-float input:focus + label,
   .label-float input:not(:placeholder-shown) + label{
-    font-size: 35px;
-    margin-top: 1px;
-    left: 0;
-    color: #12b403;
+    font-size: 15px;
+    margin-top: 1%;
+    left: 10px;
+    color: #53006d;
   }
 
 
+  .label-float2{
+    position: relative;
+    
+  } 
+  
+  .label-float2 input{
+    border: 2px;
+    border-bottom: 2px solid lightgrey;
+    outline: none;  
+    min-width: 180px;
+    
+    font-size: 25px;
+    color: black  ;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance:none;
+    border-radius:0;
+  }
+  
+  .label-float2 input:focus{
+    border-bottom: 2px solid #53006d;
+  }
+  
+  .label-float2 input::placeholder{
+    color:transparent;
+  }
+  
+  .label-float2 label{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    margin-top: 20%;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+  }
+  
+  .label-float2 input:required:invalid + label{
+    color: red;
+  }
+  .label-float2 input:focus:required:invalid{
+    border-bottom: 2px solid red;
+  }
+  .label-float2 input:required:invalid + label:before{
+    content: '*';
+  }
+  .label-float2 input:focus + label,
+  .label-float2 input:not(:placeholder-shown) + label{
+    font-size: 15px;
+    margin-top: 2%;
+    left: 10px;
+    color: #53006d;
+  }
+
+
+  
 .bordas15{
   border-radius: 17%;
   border-top-left-radius: 50%;
