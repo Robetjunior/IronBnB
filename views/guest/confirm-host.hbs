@@ -1,26 +1,26 @@
 
-<div class="jumbotron">
-    <div class="jumbotron">
-        <div class="jumbotron">
-            <div class="jumbotron"></div>
-                <div class="jumbotron">
-                <div class="container w-50">
+<div class="jumbotron" >
+   
+        <div class="jumbotron" style="background-color: transparent!important;">
+           
+             
+                <div class="jumbotron w-100 d-flex justify-content-center " style="background-color: transparent!important" >
+                    
+                <div class="container w-50  " >
                     {{#with reserva}}
   
-                        <div class="align-items-center ">
-                            <h4 class="text-center justify-content-between align-items-center mb-3 ">
-                                <span class="text-muted " style="font-size: xx-large;">{{ userInSession.username }} this is your cart</span>
-                            </h4>
-                        </div>   
+                        <div class="align-items-center d-flex justify-content-center pb-4 pt-4 "  >
+                        
+                            </div>   
 
                         <div class="d-flex  flex-row w-100">
 
-                            <div class="w-75 jumbotron column">
+                            <div class="w-75  column" style="background-color: transparent!important">
                                 <img class="w-100 " src="/images/a.jpg" alt="host"  data-holder-rendered="true">                          
                             {{!-- <img class="w-75 " src="/images/{{this.imgPath}}" alt="host"  data-holder-rendered="true"> --}}
                             </div>
 
-                            <div class=" mb-4 align-items-center w-50 h-100 ">
+                            <div class=" mb-4 align-items-center w-50 h-100 p-3 " style="background-color: rgba(0,0,0,.4);">
                                 <div class="w-100 h-100">
                                     <ul class="list-group mb-3 h-100">
                                         <li class=" list-group-item d-flex justify-content-between lh-condensed">
@@ -36,24 +36,25 @@
                                                 <h6 class="my-0" style="font-size: large;">Promo code</h6>
                                                 <small  style="font-size:large;">Example Code</small>
                                             </div>
-                                            <span class="text-success" style="font-size: large;">R$ - 50,00</span>
+                                            <span class="text-success" style="font-size: large;">R$ - 00,00</span>
                                         </li>
 
                                         <li class="list-group-item d-flex justify-content-between">
                                             <span style="font-size: large;">TOTAL:</span>
                                             <strong style="font-size: large;">R$ {{this.totalValue}},00</strong>
                                         </li>
+               
                                     </ul>
                                 </div>
 
-                                <div class="align-items-center">
+                                <div class="align-items-center" style="background-color:rgba (0, 0, 0,0.4)">
 
                                     <form action="/search/{{this.hostId}}/reserva/confirm" class="form-signin" method="POST">
-                                        <div class="input-group w-75 pl-4 pr-4 " style="margin-left: 10%;">
+                                        <div class="input-group w-75  " style="margin-left: 10%;">
                                             
                                             <input type="text" class="form-control" placeholder="digite o código promocional">
-                                            <div class="input-group-append pt-4">
-                                                <button type="submit" class="btn btn-primary">CONFIRMAR <svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <div class="input-group-append ">
+                                                <button type="submit" class="btn btn-primary" style="background-color: rgb(38, 202, 202);border:none ">CONFIRMAR <svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
                                                 </svg></button>
                                                 
@@ -68,4 +69,4 @@
             </div>
         </div>
     </div>
-</div>
+
