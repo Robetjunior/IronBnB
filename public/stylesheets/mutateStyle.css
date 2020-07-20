@@ -214,3 +214,15 @@ font-size: 20px;
 .reserva-host{
  background-color: rgba(20, 10, 10, 0.493)
 }
+
+
+.padrao{
+  background-color: rgba(17, 187, 173, 0.973);
+  color:white;
+
+}
+.padrao:hover{
+  background-color: white;
+  color:rgba(16, 206, 190, 0.973);
+  
+}
