@@ -147,7 +147,6 @@ router.get('/userProfile', async (req, res) => {
 
   const result = findReserv.map(item => item.hostId)
 
-  console.log(result)
 
   res.render('users/user-profile', { userInSession: req.session.currentUser, reservas: newArr});
 });
@@ -160,7 +159,6 @@ router.get('/userProfile', async (req, res) => {
 router.get('/host', async (req, res) => {
   //verificar se  tem host criado pelo o usuario logado e apresentar na tela
   const findHost = await HostModel.find({"ownerId":req.session.currentUser._id}); 
-  console.log(findHost)
   res.render('hoster/managment-host', {userInSession: req.session.currentUser, findHost})
 });
 
@@ -177,7 +175,6 @@ router.post('/host/create', fileUploader.single("imgPath"), (req,res) => {
 
     HostModel.create({local, title, espaco, qntHosp, preco, imgPath: req.file.url, ownerId: req.session.currentUser._id})
       .then((data)=>{
-        console.log(data);
         res.redirect('/host');
       })
       .catch((err)=>

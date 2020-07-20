@@ -29,6 +29,8 @@ router.get('/search/:hostId', async (req, res) =>  {
     }
 });
 
+
+
 router.post('/search/:hostId/reserva', async (req, res) => {
     try{
         if(!req.session.currentUser){
@@ -53,6 +55,9 @@ router.post('/search/:hostId/reserva', async (req, res) => {
             totalValue: result.preco[0] * diffDays
         });
 
+        // const hostId = await Host.findById(req.params.hostId);
+        // console.log(hostId)
+
         res.render('guest/confirm-host', {reserva: newReserva, userInSession: req.session.currentUser})
     }catch(err){
         throw new Error(err);
@@ -60,8 +65,12 @@ router.post('/search/:hostId/reserva', async (req, res) => {
 })
 
 router.get('/search/:hostId/reserva/confirm', async(req, res)=>{
-    const hostId = await Host.findById(req.params.hostId);
-    res.render('confirm-host', {host: hostId, userInSession: req.session.currentUser})
+    try{
+        const hostId = await Host.findById(req.params.hostId);
+        res.render('confirm-host', {host: hostId, userInSession: req.session.currentUser})
+    }catch(err){
+        throw new Error(err)
+    }
 })
 
 router.post('/search/:hostId/reserva/confirm', async(req, res)=>{
