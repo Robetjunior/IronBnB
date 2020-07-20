@@ -1,21 +1,77 @@
 
-<div class="jumbotron text-center" style=";background-color: rgba(7, 0, 0, 0.5)!important">      
+<div class="jumbotron text-center" style=";background-color: rgba(7, 0, 0, 0)!important">      
 
-    <div class="jumbotron text-center" style="p;background-color: rgba(7, 0, 0, 0.)0!important">
-        <div class="container w-100 ml-2 row "style="background-color: rgba(7, 0, 0, 0.0)!important">
+    <div class="container-fluid text-center" style="p;background-color: rgba(7, 0, 0, 0.)0!important">
+        <div class="container w-100 ml-2 row  d-flex justify-content-center"style="background-color:transparent!important">
             
-            {{#with host}}
-                <div class=" w-50 d-flex align-items-center">
-                    <img class="w-100 " src="{{this.imgPath}}" alt="host"  data-holder-rendered="true">
+            {{#with host}}  
+                <div class=" w-100  d-flex justify-content-center">
+                    <div class="w-75 shadow-lg  bg-white rounded">
+                    <img class="w-100" src="{{this.imgPath}}" alt="host"  data-holder-rendered="true">
+                    </div>
+                        <div class="w-25 h-100 d-flex justify-content-center "  >
+                    <div class="jumbotron w-100 h-100"style="background-color: rgba(7, 0, 0, 0.8)!important">
+  
+                        <p class="" style="color:white!important;"><svg  style="color:white!important;"  width="15%" height="15%" viewBox="0 0 16 16" class=" bi bi-building" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+                        <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+                        </svg> {{this.title}} </p>
+
+                        <h3 class="texto-titulo " style="font-size:x-large"> Preço: R$ {{this.preco}},00/noite </h3></p> 
+
+                            {{!-- <img class="card-img-top bordas15" src="/zimages/{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true"> --}}
+                         
+                        <p class=" texto-espaco"><svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-door-closed-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4 1a1 1 0 0 0-1 1v13H1.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2a1 1 0 0 0-1-1H4zm2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                        </svg> {{this.espaco}}</p> 
+                            
+                        <p class=" texto-espaco"><svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                        </svg> Até {{this.qntHosp}}     hospedes. </p>
+                        <div class="d-flex ">
+                            {{#each comodidades}} 
+                            <h4 class=" ml-4 texto-tipos"> {{this}}  </h4>
+                            {{/each}}
+                        </div>
+                            <p class="texto-descricao text-center" > {{this.descricao}}  </p>  
+                            <div class=" h-100"> 
+                                <form action="/search/{{this.id}}/reserva" class="reserva-host form-signin jumbotron w-100 " method="POST">
+                                    <div class=" h-25">  <label class="rol"for="startDate"><h4 style="color:white!important;">Checkin </h4>  </label>
+                                        <input class="rol" id="checkin" name="startDate" style="width:75%;" type="date"><svg  style="color:white!important;" width="15%" height="10%" viewBox="0 0 16 16" class="bi bi-calendar-date" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
+                                        <path fill-rule="evenodd" d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
+                                        <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"/>
+                                        </svg> 
+                                    </div>
+
+                                    <div class=" h-25">  <label class="rol"for="endDate"> <h4 style="color:white!important;" >Checkout</h4> </label> 
+                                        <input  class="rol" name="endDate" style="width:75%"type="date">
+                                        <svg style="color:white!important;"width="15%" height="10%" viewBox="0 0 16 16" class="bi bi-calendar-date-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM0 5h16v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5zm9.336 7.79c-1.11 0-1.656-.767-1.703-1.407h.683c.043.37.387.82 1.051.82.844 0 1.301-.848 1.305-2.164h-.027c-.153.414-.637.79-1.383.79-.852 0-1.676-.61-1.676-1.77 0-1.137.871-1.809 1.797-1.809 1.172 0 1.953.734 1.953 2.668 0 1.805-.742 2.871-2 2.871zm.066-2.544c.625 0 1.184-.484 1.184-1.18 0-.832-.527-1.23-1.16-1.23-.586 0-1.168.387-1.168 1.21 0 .817.543 1.2 1.144 1.2zm-2.957-2.89v5.332H5.77v-4.61h-.012c-.29.156-.883.52-1.258.777V8.16a12.6 12.6 0 0 1 1.313-.805h.632z"/>
+                                        </svg> 
+                                    </div>
+
+                                    <div class="h-50">  <button class=""type="submit" style=" width:80% ;"  class="glyphicon-ok btn  btn-primary">
+                                         Reservar <svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                        </svg>
+                                        </button>
+                                        </form>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                    
                 </div>
           
-                <div class="jumbotron w-25   column h-50" style="background-color: rgba(7, 0, 0, 0.0)!important" >
-                   <div class="jumbotron" style="background-color: rgba(7, 0, 0, 0.0)!important"></div>
-                    <div class="jumbotron" style="background-color: rgba(7, 0, 0, 0.0)!important"></div>
-                            <div class="jumbtron  w-100 " >
+                            {{!-- <div class="jumbotron w-50  column h-50" style="background-color: rgba(7, 0, 0, 0.0)!important" > --}}
+                   
                                 
-                            <div class="w-100 " >
-                                <div id="carousel-example-generic " class="carousel slide " data-ride="carousel">
+                                 {{!-- <div class="w-100 " >
+                                      <div id="carousel-example-generic " class="carousel slide " data-ride="carousel">
                                 
                                 <!-- Indicators -->
                                                                     
@@ -25,11 +81,11 @@
                                         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                                         <li data-target="#carousel-example-generic" data-slide-to="3"></li>
                                         <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                                    </ol>
+                                    </ol> --}}
 
-                            <!-- Wrapper for slides -->
+                                <!-- Wrapper for slides -->
 
-                                    <div class="carousel-inner  " role="listbox" style="">
+                                    {{!-- <div class="carousel-inner  " role="listbox" style="">
                                         <div class="item active ">
                                             <img class="w-100 bordas15" src="/images/chaleCampoJordao.jpg" alt="host"  data-holder-rendered="true">
                                         </div>
@@ -49,11 +105,11 @@
                                         <div class="item">
                                             <img class="w-100 bordas15" src="/images/vilaChale.jpg" alt="foto interna 4">
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                          <!-- Controls -->
 
-                                    <a class=" carousel-control left " href="#carousel-example-generic" role="button" data-slide="prev">
+                                    {{!-- <a class=" carousel-control left " href="#carousel-example-generic" role="button" data-slide="prev">
                                     <span class="glyphicon glyphicon-chevron-left " aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                     </a>
@@ -63,62 +119,10 @@
                                     <span class="sr-only">Next</span>
                                     </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>  
-
-                    <div class="jumbotron w-25  h-50"style="background-color: rgba(7, 0, 0, 0.8)!important">
-  
-                            <p class="" style="color:white!important;"><svg  style="color:white!important;"  width="15%" height="15%" viewBox="0 0 16 16" class=" bi bi-building" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
-                            <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
-                            </svg> {{this.title}} </p>
-
-                            <h3 class="texto-titulo " style="font-size:x-large"> Preço: R$ {{this.preco}},00/noite </h3></p> 
-
-                            {{!-- <img class="card-img-top bordas15" src="/zimages/{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true"> --}}
-                         
-                            <p class=" texto-espaco"><svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-door-closed-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4 1a1 1 0 0 0-1 1v13H1.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2a1 1 0 0 0-1-1H4zm2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                            </svg> {{this.espaco}}</p> 
-                            
-                            <p class=" texto-espaco"><svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
-                            </svg> Até {{this.qntHosp}}     hospedes. </p>
-                            <div class="d-flex ">
-                            {{#each comodidades}} 
-                            <h3 class=" ml-4 texto-tipos"> {{this}}  </h3>
-                            {{/each}}
-                            </div>
-                            <p class="texto-descricao text-center" style="border: 1px solid rgb(108, 19, 160)"> {{this.descricao}}  </p>  
-                             
-                                <div class=" h-100"> 
-                                    <form action="/search/{{this.id}}/reserva" class="reserva-host form-signin jumbotron w-100 " method="POST">
-                                        <div class=" h-25">  <label class="rol"for="startDate"><h4>Checkin </h4>  </label>
-                                            <input class="rol" id="checkin" name="startDate" style="width:50%;" type="date"><svg  style="color:white!important;" width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-calendar-date" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.445 11.688V6.354h-.633A12.6 12.6 0 0 0 4.5 7.16v.695c.375-.257.969-.62 1.258-.777h.012v4.61h.675zm1.188-1.305c.047.64.594 1.406 1.703 1.406 1.258 0 2-1.066 2-2.871 0-1.934-.781-2.668-1.953-2.668-.926 0-1.797.672-1.797 1.809 0 1.16.824 1.77 1.676 1.77.746 0 1.23-.376 1.383-.79h.027c-.004 1.316-.461 2.164-1.305 2.164-.664 0-1.008-.45-1.05-.82h-.684zm2.953-2.317c0 .696-.559 1.18-1.184 1.18-.601 0-1.144-.383-1.144-1.2 0-.823.582-1.21 1.168-1.21.633 0 1.16.398 1.16 1.23z"/>
-                                            <path fill-rule="evenodd" d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
-                                            <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"/>
-                                            </svg> 
-                                        </div>
-
-                                        <div class=" h-25">  <label class="rol"for="endDate"> <h4>Checkout</h4> </label> 
-                                            <input  class="rol" name="endDate" style="width:50%"type="date">
-                                            <svg style="color:white!important;"width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-calendar-date-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM0 5h16v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5zm9.336 7.79c-1.11 0-1.656-.767-1.703-1.407h.683c.043.37.387.82 1.051.82.844 0 1.301-.848 1.305-2.164h-.027c-.153.414-.637.79-1.383.79-.852 0-1.676-.61-1.676-1.77 0-1.137.871-1.809 1.797-1.809 1.172 0 1.953.734 1.953 2.668 0 1.805-.742 2.871-2 2.871zm.066-2.544c.625 0 1.184-.484 1.184-1.18 0-.832-.527-1.23-1.16-1.23-.586 0-1.168.387-1.168 1.21 0 .817.543 1.2 1.144 1.2zm-2.957-2.89v5.332H5.77v-4.61h-.012c-.29.156-.883.52-1.258.777V8.16a12.6 12.6 0 0 1 1.313-.805h.632z"/>
-                                            </svg> 
-                                        </div>
-
-                                        <div class="h-50">  <button class=""type="submit" style=" width:60% ;"  class="glyphicon-ok btn  btn-primary">
-                                        Reservar <svg width="10%" height="10%" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                        </svg>
-                                        </button>
-                                    </form>
-                                </div>
-                    </div>
-                </div>
-                  
+                            </div> --}}
+                        {{!-- </div> --}}
+                    {{!-- </div>   --}}
+                
             {{/with}}
 
         </div>
