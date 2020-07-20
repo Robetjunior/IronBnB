@@ -24,9 +24,10 @@
                 <div class="card-body">
                     <div class="tab-content"> 
                         <img class="card-img-top" src="{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+                        <h5><strong>Titulo:</strong> {{this.title}}</h5>
                         <h5><strong>Localização:</strong> {{this.local}}</h5>
-                        <h5 class="card-text"><strong>Quantidade de hospedes:</strong>  {{this.hostId.qntHosp}}</h5>
-                                            <h5><strong>Price: </strong> R${{this.totalValue}},00</h5>
+                        <h5 class="card-text"><strong>Quantidade de hospedes:</strong>  {{this.qntHosp}}</h5>
+                                            <h5><strong>Price: </strong> R${{this.preco}},00</h5>
                     </div>
                 </div>
                 
@@ -35,9 +36,10 @@
                 <div class="card-body">
                     <div class="tab-content"> 
                         <img class="card-img-top" src="{{this.imgPath}}" alt="host" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+                        <h5><strong>Titulo:</strong> {{this.title}}</h5>
                         <h5><strong>Localização:</strong> {{this.local}}</h5>
-                        <h5 class="card-text"><strong>Quantidade de hospedes:</strong>  {{this.hostId.qntHosp}}</h5>
-                        <h5><strong>Price: </strong> R${{this.totalValue}},00</h5>
+                        <h5 class="card-text"><strong>Quantidade de hospedes:</strong>  {{this.qntHosp}}</h5>
+                        <h5><strong>Price: </strong> R${{preco}},00</h5>
                 </div>
                
                 {{/if}}
