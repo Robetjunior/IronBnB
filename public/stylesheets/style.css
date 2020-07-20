@@ -547,7 +547,11 @@ h2{
       }
       
       .search-img {
-        background-image:rgba(0,0,0,.3);
+        background:url("/images/imagebg.png");
+        width:1500px;
+        height: 400px; 
+        background-repeat: no-repeat;
+        background-size: cover; 
       }
     
       
